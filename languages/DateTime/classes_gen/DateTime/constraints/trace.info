@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="ConstraintsAspectDescriptor.java">
+      <unit at="13,0,29,0" name="DateTime.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:2f8d778e-510f-4cfd-93b2-f10dc26ce3c7(DateTime.constraints)/6047094888109552706">
+    <file name="Date_Constraints.java">
+      <node id="6047094888109552706" at="9,29,10,131" concept="1" />
+      <node id="6047094888109552706" at="9,0,12,0" concept="0" trace="Date_Constraints#()V" />
+      <scope id="6047094888109552706" at="9,29,10,131" />
+      <scope id="6047094888109552706" at="9,0,12,0" />
+      <unit id="6047094888109552706" at="8,0,14,0" name="DateTime.constraints.Date_Constraints" />
+    </file>
+  </root>
+</debug-info>
+

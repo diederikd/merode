@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
+  <root>
+    <file name="ConceptPresentationAspectImpl.java">
+      <unit at="11,0,25,0" name="DateTime.structure.ConceptPresentationAspectImpl" />
+    </file>
+    <file name="LanguageConceptSwitch.java">
+      <unit at="10,0,28,0" name="DateTime.structure.LanguageConceptSwitch" />
+    </file>
+    <file name="StructureAspectDescriptor.java">
+      <unit at="14,0,52,0" name="DateTime.structure.StructureAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:f80e0c3f-a508-4694-811e-d58cf738628b(DateTime.structure)/6047094888109551967">
+    <file name="Day.java">
+      <node id="6047094888109551967" at="42,0,43,0" concept="3" trace="myName" />
+      <node id="6047094888109551967" at="43,27,44,18" concept="7" />
+      <node id="6047094888109551967" at="46,0,47,0" concept="3" trace="myValue" />
+      <node id="6047094888109551967" at="47,42,48,18" concept="2" />
+      <node id="6047094888109551967" at="48,18,49,20" concept="2" />
+      <node id="6047094888109551967" at="51,28,52,19" concept="7" />
+      <node id="6047094888109551967" at="54,36,55,19" concept="7" />
+      <node id="6047094888109551967" at="57,42,58,66" concept="6" />
+      <node id="6047094888109551967" at="58,66,59,51" concept="2" />
+      <node id="6047094888109551967" at="59,51,60,51" concept="2" />
+      <node id="6047094888109551967" at="60,51,61,51" concept="2" />
+      <node id="6047094888109551967" at="61,51,62,51" concept="2" />
+      <node id="6047094888109551967" at="62,51,63,51" concept="2" />
+      <node id="6047094888109551967" at="63,51,64,51" concept="2" />
+      <node id="6047094888109551967" at="64,51,65,51" concept="2" />
+      <node id="6047094888109551967" at="65,51,66,51" concept="2" />
+      <node id="6047094888109551967" at="66,51,67,51" concept="2" />
+      <node id="6047094888109551967" at="67,51,68,52" concept="2" />
+      <node id="6047094888109551967" at="68,52,69,52" concept="2" />
+      <node id="6047094888109551967" at="69,52,70,52" concept="2" />
+      <node id="6047094888109551967" at="70,52,71,52" concept="2" />
+      <node id="6047094888109551967" at="71,52,72,52" concept="2" />
+      <node id="6047094888109551967" at="72,52,73,52" concept="2" />
+      <node id="6047094888109551967" at="73,52,74,52" concept="2" />
+      <node id="6047094888109551967" at="74,52,75,52" concept="2" />
+      <node id="6047094888109551967" at="75,52,76,52" concept="2" />
+      <node id="6047094888109551967" at="76,52,77,52" concept="2" />
+      <node id="6047094888109551967" at="77,52,78,52" concept="2" />
+      <node id="6047094888109551967" at="78,52,79,52" concept="2" />
+      <node id="6047094888109551967" at="79,52,80,52" concept="2" />
+      <node id="6047094888109551967" at="80,52,81,52" concept="2" />
+      <node id="6047094888109551967" at="81,52,82,52" concept="2" />
+      <node id="6047094888109551967" at="82,52,83,52" concept="2" />
+      <node id="6047094888109551967" at="83,52,84,52" concept="2" />
+      <node id="6047094888109551967" at="84,52,85,52" concept="2" />
+      <node id="6047094888109551967" at="85,52,86,52" concept="2" />
+      <node id="6047094888109551967" at="86,52,87,52" concept="2" />
+      <node id="6047094888109551967" at="87,52,88,52" concept="2" />
+      <node id="6047094888109551967" at="88,52,89,52" concept="2" />
+      <node id="6047094888109551967" at="89,52,90,16" concept="7" />
+      <node id="6047094888109551967" at="92,34,93,18" concept="7" />
+      <node id="6047094888109551967" at="96,24,97,30" concept="7" />
+      <node id="6047094888109551967" at="99,50,100,20" concept="7" />
+      <node id="6047094888109551967" at="102,50,103,20" concept="7" />
+      <node id="6047094888109551967" at="105,50,106,20" concept="7" />
+      <node id="6047094888109551967" at="108,50,109,20" concept="7" />
+      <node id="6047094888109551967" at="111,50,112,20" concept="7" />
+      <node id="6047094888109551967" at="114,50,115,20" concept="7" />
+      <node id="6047094888109551967" at="117,50,118,20" concept="7" />
+      <node id="6047094888109551967" at="120,50,121,20" concept="7" />
+      <node id="6047094888109551967" at="123,50,124,20" concept="7" />
+      <node id="6047094888109551967" at="126,51,127,21" concept="7" />
+      <node id="6047094888109551967" at="129,51,130,21" concept="7" />
+      <node id="6047094888109551967" at="132,51,133,21" concept="7" />
+      <node id="6047094888109551967" at="135,51,136,21" concept="7" />
+      <node id="6047094888109551967" at="138,51,139,21" concept="7" />
+      <node id="6047094888109551967" at="141,51,142,21" concept="7" />
+      <node id="6047094888109551967" at="144,51,145,21" concept="7" />
+      <node id="6047094888109551967" at="147,51,148,21" concept="7" />
+      <node id="6047094888109551967" at="150,51,151,21" concept="7" />
+      <node id="6047094888109551967" at="153,51,154,21" concept="7" />
+      <node id="6047094888109551967" at="156,51,157,21" concept="7" />
+      <node id="6047094888109551967" at="159,51,160,21" concept="7" />
+      <node id="6047094888109551967" at="162,51,163,21" concept="7" />
+      <node id="6047094888109551967" at="165,51,166,21" concept="7" />
+      <node id="6047094888109551967" at="168,51,169,21" concept="7" />
+      <node id="6047094888109551967" at="171,51,172,21" concept="7" />
+      <node id="6047094888109551967" at="174,51,175,21" concept="7" />
+      <node id="6047094888109551967" at="177,51,178,21" concept="7" />
+      <node id="6047094888109551967" at="180,51,181,21" concept="7" />
+      <node id="6047094888109551967" at="183,51,184,21" concept="7" />
+      <node id="6047094888109551967" at="186,51,187,21" concept="7" />
+      <node id="6047094888109551967" at="189,51,190,21" concept="7" />
+      <node id="6047094888109551967" at="191,5,192,28" concept="7" />
+      <node id="6047094888109551967" at="43,0,46,0" concept="5" trace="getName#()Ljava/lang/String;" />
+      <node id="6047094888109551967" at="51,0,54,0" concept="5" trace="getValue#()Ljava/lang/String;" />
+      <node id="6047094888109551967" at="54,0,57,0" concept="5" trace="getValueAsString#()Ljava/lang/String;" />
+      <node id="6047094888109551967" at="92,0,95,0" concept="8" trace="getDefault#()LDateTime/structure/Day;" />
+      <node id="6047094888109551967" at="95,46,98,5" concept="4" />
+      <node id="6047094888109551967" at="98,5,101,5" concept="4" />
+      <node id="6047094888109551967" at="101,5,104,5" concept="4" />
+      <node id="6047094888109551967" at="104,5,107,5" concept="4" />
+      <node id="6047094888109551967" at="107,5,110,5" concept="4" />
+      <node id="6047094888109551967" at="110,5,113,5" concept="4" />
+      <node id="6047094888109551967" at="113,5,116,5" concept="4" />
+      <node id="6047094888109551967" at="116,5,119,5" concept="4" />
+      <node id="6047094888109551967" at="119,5,122,5" concept="4" />
+      <node id="6047094888109551967" at="122,5,125,5" concept="4" />
+      <node id="6047094888109551967" at="125,5,128,5" concept="4" />
+      <node id="6047094888109551967" at="128,5,131,5" concept="4" />
+      <node id="6047094888109551967" at="131,5,134,5" concept="4" />
+      <node id="6047094888109551967" at="134,5,137,5" concept="4" />
+      <node id="6047094888109551967" at="137,5,140,5" concept="4" />
+      <node id="6047094888109551967" at="140,5,143,5" concept="4" />
+      <node id="6047094888109551967" at="143,5,146,5" concept="4" />
+      <node id="6047094888109551967" at="146,5,149,5" concept="4" />
+      <node id="6047094888109551967" at="149,5,152,5" concept="4" />
+      <node id="6047094888109551967" at="152,5,155,5" concept="4" />
+      <node id="6047094888109551967" at="155,5,158,5" concept="4" />
+      <node id="6047094888109551967" at="158,5,161,5" concept="4" />
+      <node id="6047094888109551967" at="161,5,164,5" concept="4" />
+      <node id="6047094888109551967" at="164,5,167,5" concept="4" />
+      <node id="6047094888109551967" at="167,5,170,5" concept="4" />
+      <node id="6047094888109551967" at="170,5,173,5" concept="4" />
+      <node id="6047094888109551967" at="173,5,176,5" concept="4" />
+      <node id="6047094888109551967" at="176,5,179,5" concept="4" />
+      <node id="6047094888109551967" at="179,5,182,5" concept="4" />
+      <node id="6047094888109551967" at="182,5,185,5" concept="4" />
+      <node id="6047094888109551967" at="185,5,188,5" concept="4" />
+      <node id="6047094888109551967" at="188,5,191,5" concept="4" />
+      <node id="6047094888109551967" at="47,0,51,0" concept="1" trace="Day#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="6047094888109551967" at="57,0,92,0" concept="8" trace="getConstants#()Ljava/util/List;" />
+      <node id="6047094888109551967" at="95,0,194,0" concept="8" trace="parseValue#(Ljava/lang/String;)LDateTime/structure/Day;" />
+      <scope id="6047094888109551967" at="43,27,44,18" />
+      <scope id="6047094888109551967" at="51,28,52,19" />
+      <scope id="6047094888109551967" at="54,36,55,19" />
+      <scope id="6047094888109551967" at="92,34,93,18" />
+      <scope id="6047094888109551967" at="96,24,97,30" />
+      <scope id="6047094888109551967" at="99,50,100,20" />
+      <scope id="6047094888109551967" at="102,50,103,20" />
+      <scope id="6047094888109551967" at="105,50,106,20" />
+      <scope id="6047094888109551967" at="108,50,109,20" />
+      <scope id="6047094888109551967" at="111,50,112,20" />
+      <scope id="6047094888109551967" at="114,50,115,20" />
+      <scope id="6047094888109551967" at="117,50,118,20" />
+      <scope id="6047094888109551967" at="120,50,121,20" />
+      <scope id="6047094888109551967" at="123,50,124,20" />
+      <scope id="6047094888109551967" at="126,51,127,21" />
+      <scope id="6047094888109551967" at="129,51,130,21" />
+      <scope id="6047094888109551967" at="132,51,133,21" />
+      <scope id="6047094888109551967" at="135,51,136,21" />
+      <scope id="6047094888109551967" at="138,51,139,21" />
+      <scope id="6047094888109551967" at="141,51,142,21" />
+      <scope id="6047094888109551967" at="144,51,145,21" />
+      <scope id="6047094888109551967" at="147,51,148,21" />
+      <scope id="6047094888109551967" at="150,51,151,21" />
+      <scope id="6047094888109551967" at="153,51,154,21" />
+      <scope id="6047094888109551967" at="156,51,157,21" />
+      <scope id="6047094888109551967" at="159,51,160,21" />
+      <scope id="6047094888109551967" at="162,51,163,21" />
+      <scope id="6047094888109551967" at="165,51,166,21" />
+      <scope id="6047094888109551967" at="168,51,169,21" />
+      <scope id="6047094888109551967" at="171,51,172,21" />
+      <scope id="6047094888109551967" at="174,51,175,21" />
+      <scope id="6047094888109551967" at="177,51,178,21" />
+      <scope id="6047094888109551967" at="180,51,181,21" />
+      <scope id="6047094888109551967" at="183,51,184,21" />
+      <scope id="6047094888109551967" at="186,51,187,21" />
+      <scope id="6047094888109551967" at="189,51,190,21" />
+      <scope id="6047094888109551967" at="47,42,49,20" />
+      <scope id="6047094888109551967" at="43,0,46,0" />
+      <scope id="6047094888109551967" at="51,0,54,0" />
+      <scope id="6047094888109551967" at="54,0,57,0" />
+      <scope id="6047094888109551967" at="92,0,95,0" />
+      <scope id="6047094888109551967" at="47,0,51,0">
+        <var name="name" id="6047094888109551967" />
+        <var name="value" id="6047094888109551967" />
+      </scope>
+      <scope id="6047094888109551967" at="57,42,90,16">
+        <var name="list" id="6047094888109551967" />
+      </scope>
+      <scope id="6047094888109551967" at="57,0,92,0" />
+      <scope id="6047094888109551967" at="95,46,192,28" />
+      <scope id="6047094888109551967" at="95,0,194,0">
+        <var name="value" id="6047094888109551967" />
+      </scope>
+      <unit id="6047094888109551967" at="9,0,195,0" name="DateTime.structure.Day" />
+    </file>
+    <file name="Day_PropertySupport.java">
+      <node id="6047094888109551967" at="11,24,12,18" concept="7" />
+      <node id="6047094888109551967" at="13,5,14,83" concept="6" />
+      <node id="6047094888109551967" at="15,33,16,38" concept="6" />
+      <node id="6047094888109551967" at="17,45,18,20" concept="7" />
+      <node id="6047094888109551967" at="20,5,21,17" concept="7" />
+      <node id="6047094888109551967" at="24,24,25,18" concept="7" />
+      <node id="6047094888109551967" at="26,5,27,83" concept="6" />
+      <node id="6047094888109551967" at="28,33,29,38" concept="6" />
+      <node id="6047094888109551967" at="30,45,31,43" concept="7" />
+      <node id="6047094888109551967" at="33,5,34,16" concept="7" />
+      <node id="6047094888109551967" at="36,49,37,41" concept="6" />
+      <node id="6047094888109551967" at="38,27,39,32" concept="7" />
+      <node id="6047094888109551967" at="40,5,41,14" concept="7" />
+      <node id="6047094888109551967" at="10,44,13,5" concept="4" />
+      <node id="6047094888109551967" at="16,38,19,7" concept="4" />
+      <node id="6047094888109551967" at="23,47,26,5" concept="4" />
+      <node id="6047094888109551967" at="29,38,32,7" concept="4" />
+      <node id="6047094888109551967" at="37,41,40,5" concept="4" />
+      <node id="6047094888109551967" at="14,83,20,5" concept="9" />
+      <node id="6047094888109551967" at="27,83,33,5" concept="9" />
+      <node id="6047094888109551967" at="36,0,43,0" concept="5" trace="fromInternalValue#(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="6047094888109551967" at="10,0,23,0" concept="5" trace="canSetValue#(Ljava/lang/String;)Z" />
+      <node id="6047094888109551967" at="23,0,36,0" concept="5" trace="toInternalValue#(Ljava/lang/String;)Ljava/lang/String;" />
+      <scope id="6047094888109551967" at="11,24,12,18" />
+      <scope id="6047094888109551967" at="17,45,18,20" />
+      <scope id="6047094888109551967" at="24,24,25,18" />
+      <scope id="6047094888109551967" at="30,45,31,43" />
+      <scope id="6047094888109551967" at="38,27,39,32" />
+      <scope id="6047094888109551967" at="15,33,19,7">
+        <var name="constant" id="6047094888109551967" />
+      </scope>
+      <scope id="6047094888109551967" at="28,33,32,7">
+        <var name="constant" id="6047094888109551967" />
+      </scope>
+      <scope id="6047094888109551967" at="36,49,41,14">
+        <var name="constant" id="6047094888109551967" />
+      </scope>
+      <scope id="6047094888109551967" at="36,0,43,0">
+        <var name="value" id="6047094888109551967" />
+      </scope>
+      <scope id="6047094888109551967" at="10,44,21,17">
+        <var name="constants" id="6047094888109551967" />
+      </scope>
+      <scope id="6047094888109551967" at="23,47,34,16">
+        <var name="constants" id="6047094888109551967" />
+      </scope>
+      <scope id="6047094888109551967" at="10,0,23,0">
+        <var name="value" id="6047094888109551967" />
+      </scope>
+      <scope id="6047094888109551967" at="23,0,36,0">
+        <var name="value" id="6047094888109551967" />
+      </scope>
+      <unit id="6047094888109551967" at="9,0,44,0" name="DateTime.structure.Day_PropertySupport" />
+    </file>
+  </root>
+  <root nodeRef="r:f80e0c3f-a508-4694-811e-d58cf738628b(DateTime.structure)/6047094888109552608">
+    <file name="Month.java">
+      <node id="6047094888109552608" at="23,0,24,0" concept="3" trace="myName" />
+      <node id="6047094888109552608" at="24,27,25,18" concept="7" />
+      <node id="6047094888109552608" at="27,0,28,0" concept="3" trace="myValue" />
+      <node id="6047094888109552608" at="28,44,29,18" concept="2" />
+      <node id="6047094888109552608" at="29,18,30,20" concept="2" />
+      <node id="6047094888109552608" at="32,28,33,19" concept="7" />
+      <node id="6047094888109552608" at="35,36,36,19" concept="7" />
+      <node id="6047094888109552608" at="38,44,39,70" concept="6" />
+      <node id="6047094888109552608" at="39,70,40,53" concept="2" />
+      <node id="6047094888109552608" at="40,53,41,53" concept="2" />
+      <node id="6047094888109552608" at="41,53,42,53" concept="2" />
+      <node id="6047094888109552608" at="42,53,43,53" concept="2" />
+      <node id="6047094888109552608" at="43,53,44,53" concept="2" />
+      <node id="6047094888109552608" at="44,53,45,53" concept="2" />
+      <node id="6047094888109552608" at="45,53,46,53" concept="2" />
+      <node id="6047094888109552608" at="46,53,47,53" concept="2" />
+      <node id="6047094888109552608" at="47,53,48,53" concept="2" />
+      <node id="6047094888109552608" at="48,53,49,54" concept="2" />
+      <node id="6047094888109552608" at="49,54,50,54" concept="2" />
+      <node id="6047094888109552608" at="50,54,51,54" concept="2" />
+      <node id="6047094888109552608" at="51,54,52,16" concept="7" />
+      <node id="6047094888109552608" at="54,36,55,20" concept="7" />
+      <node id="6047094888109552608" at="58,24,59,32" concept="7" />
+      <node id="6047094888109552608" at="61,52,62,22" concept="7" />
+      <node id="6047094888109552608" at="64,52,65,22" concept="7" />
+      <node id="6047094888109552608" at="67,52,68,22" concept="7" />
+      <node id="6047094888109552608" at="70,52,71,22" concept="7" />
+      <node id="6047094888109552608" at="73,52,74,22" concept="7" />
+      <node id="6047094888109552608" at="76,52,77,22" concept="7" />
+      <node id="6047094888109552608" at="79,52,80,22" concept="7" />
+      <node id="6047094888109552608" at="82,52,83,22" concept="7" />
+      <node id="6047094888109552608" at="85,52,86,22" concept="7" />
+      <node id="6047094888109552608" at="88,53,89,23" concept="7" />
+      <node id="6047094888109552608" at="91,53,92,23" concept="7" />
+      <node id="6047094888109552608" at="94,53,95,23" concept="7" />
+      <node id="6047094888109552608" at="96,5,97,30" concept="7" />
+      <node id="6047094888109552608" at="24,0,27,0" concept="5" trace="getName#()Ljava/lang/String;" />
+      <node id="6047094888109552608" at="32,0,35,0" concept="5" trace="getValue#()Ljava/lang/String;" />
+      <node id="6047094888109552608" at="35,0,38,0" concept="5" trace="getValueAsString#()Ljava/lang/String;" />
+      <node id="6047094888109552608" at="54,0,57,0" concept="8" trace="getDefault#()LDateTime/structure/Month;" />
+      <node id="6047094888109552608" at="57,48,60,5" concept="4" />
+      <node id="6047094888109552608" at="60,5,63,5" concept="4" />
+      <node id="6047094888109552608" at="63,5,66,5" concept="4" />
+      <node id="6047094888109552608" at="66,5,69,5" concept="4" />
+      <node id="6047094888109552608" at="69,5,72,5" concept="4" />
+      <node id="6047094888109552608" at="72,5,75,5" concept="4" />
+      <node id="6047094888109552608" at="75,5,78,5" concept="4" />
+      <node id="6047094888109552608" at="78,5,81,5" concept="4" />
+      <node id="6047094888109552608" at="81,5,84,5" concept="4" />
+      <node id="6047094888109552608" at="84,5,87,5" concept="4" />
+      <node id="6047094888109552608" at="87,5,90,5" concept="4" />
+      <node id="6047094888109552608" at="90,5,93,5" concept="4" />
+      <node id="6047094888109552608" at="93,5,96,5" concept="4" />
+      <node id="6047094888109552608" at="28,0,32,0" concept="1" trace="Month#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="6047094888109552608" at="38,0,54,0" concept="8" trace="getConstants#()Ljava/util/List;" />
+      <node id="6047094888109552608" at="57,0,99,0" concept="8" trace="parseValue#(Ljava/lang/String;)LDateTime/structure/Month;" />
+      <scope id="6047094888109552608" at="24,27,25,18" />
+      <scope id="6047094888109552608" at="32,28,33,19" />
+      <scope id="6047094888109552608" at="35,36,36,19" />
+      <scope id="6047094888109552608" at="54,36,55,20" />
+      <scope id="6047094888109552608" at="58,24,59,32" />
+      <scope id="6047094888109552608" at="61,52,62,22" />
+      <scope id="6047094888109552608" at="64,52,65,22" />
+      <scope id="6047094888109552608" at="67,52,68,22" />
+      <scope id="6047094888109552608" at="70,52,71,22" />
+      <scope id="6047094888109552608" at="73,52,74,22" />
+      <scope id="6047094888109552608" at="76,52,77,22" />
+      <scope id="6047094888109552608" at="79,52,80,22" />
+      <scope id="6047094888109552608" at="82,52,83,22" />
+      <scope id="6047094888109552608" at="85,52,86,22" />
+      <scope id="6047094888109552608" at="88,53,89,23" />
+      <scope id="6047094888109552608" at="91,53,92,23" />
+      <scope id="6047094888109552608" at="94,53,95,23" />
+      <scope id="6047094888109552608" at="28,44,30,20" />
+      <scope id="6047094888109552608" at="24,0,27,0" />
+      <scope id="6047094888109552608" at="32,0,35,0" />
+      <scope id="6047094888109552608" at="35,0,38,0" />
+      <scope id="6047094888109552608" at="54,0,57,0" />
+      <scope id="6047094888109552608" at="28,0,32,0">
+        <var name="name" id="6047094888109552608" />
+        <var name="value" id="6047094888109552608" />
+      </scope>
+      <scope id="6047094888109552608" at="38,44,52,16">
+        <var name="list" id="6047094888109552608" />
+      </scope>
+      <scope id="6047094888109552608" at="38,0,54,0" />
+      <scope id="6047094888109552608" at="57,48,97,30" />
+      <scope id="6047094888109552608" at="57,0,99,0">
+        <var name="value" id="6047094888109552608" />
+      </scope>
+      <unit id="6047094888109552608" at="9,0,100,0" name="DateTime.structure.Month" />
+    </file>
+    <file name="Month_PropertySupport.java">
+      <node id="6047094888109552608" at="11,24,12,18" concept="7" />
+      <node id="6047094888109552608" at="13,5,14,87" concept="6" />
+      <node id="6047094888109552608" at="15,33,16,40" concept="6" />
+      <node id="6047094888109552608" at="17,45,18,20" concept="7" />
+      <node id="6047094888109552608" at="20,5,21,17" concept="7" />
+      <node id="6047094888109552608" at="24,24,25,18" concept="7" />
+      <node id="6047094888109552608" at="26,5,27,87" concept="6" />
+      <node id="6047094888109552608" at="28,33,29,40" concept="6" />
+      <node id="6047094888109552608" at="30,45,31,43" concept="7" />
+      <node id="6047094888109552608" at="33,5,34,16" concept="7" />
+      <node id="6047094888109552608" at="36,49,37,45" concept="6" />
+      <node id="6047094888109552608" at="38,27,39,32" concept="7" />
+      <node id="6047094888109552608" at="40,5,41,14" concept="7" />
+      <node id="6047094888109552608" at="10,44,13,5" concept="4" />
+      <node id="6047094888109552608" at="16,40,19,7" concept="4" />
+      <node id="6047094888109552608" at="23,47,26,5" concept="4" />
+      <node id="6047094888109552608" at="29,40,32,7" concept="4" />
+      <node id="6047094888109552608" at="37,45,40,5" concept="4" />
+      <node id="6047094888109552608" at="14,87,20,5" concept="9" />
+      <node id="6047094888109552608" at="27,87,33,5" concept="9" />
+      <node id="6047094888109552608" at="36,0,43,0" concept="5" trace="fromInternalValue#(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="6047094888109552608" at="10,0,23,0" concept="5" trace="canSetValue#(Ljava/lang/String;)Z" />
+      <node id="6047094888109552608" at="23,0,36,0" concept="5" trace="toInternalValue#(Ljava/lang/String;)Ljava/lang/String;" />
+      <scope id="6047094888109552608" at="11,24,12,18" />
+      <scope id="6047094888109552608" at="17,45,18,20" />
+      <scope id="6047094888109552608" at="24,24,25,18" />
+      <scope id="6047094888109552608" at="30,45,31,43" />
+      <scope id="6047094888109552608" at="38,27,39,32" />
+      <scope id="6047094888109552608" at="15,33,19,7">
+        <var name="constant" id="6047094888109552608" />
+      </scope>
+      <scope id="6047094888109552608" at="28,33,32,7">
+        <var name="constant" id="6047094888109552608" />
+      </scope>
+      <scope id="6047094888109552608" at="36,49,41,14">
+        <var name="constant" id="6047094888109552608" />
+      </scope>
+      <scope id="6047094888109552608" at="36,0,43,0">
+        <var name="value" id="6047094888109552608" />
+      </scope>
+      <scope id="6047094888109552608" at="10,44,21,17">
+        <var name="constants" id="6047094888109552608" />
+      </scope>
+      <scope id="6047094888109552608" at="23,47,34,16">
+        <var name="constants" id="6047094888109552608" />
+      </scope>
+      <scope id="6047094888109552608" at="10,0,23,0">
+        <var name="value" id="6047094888109552608" />
+      </scope>
+      <scope id="6047094888109552608" at="23,0,36,0">
+        <var name="value" id="6047094888109552608" />
+      </scope>
+      <unit id="6047094888109552608" at="9,0,44,0" name="DateTime.structure.Month_PropertySupport" />
+    </file>
+  </root>
+  <root nodeRef="r:f80e0c3f-a508-4694-811e-d58cf738628b(DateTime.structure)/6047094888109552696">
+    <file name="Year_PropertySupport.java">
+      <node id="6047094888109552696" at="8,44,9,28" concept="6" />
+      <node id="6047094888109552696" at="10,24,11,21" concept="2" />
+      <node id="6047094888109552696" at="12,12,13,24" concept="2" />
+      <node id="6047094888109552696" at="14,5,15,37" concept="7" />
+      <node id="6047094888109552696" at="12,10,14,5" concept="0" />
+      <node id="6047094888109552696" at="9,28,14,5" concept="4" />
+      <node id="6047094888109552696" at="8,0,17,0" concept="5" trace="canSetValue#(Ljava/lang/String;)Z" />
+      <scope id="6047094888109552696" at="10,24,11,21" />
+      <scope id="6047094888109552696" at="12,12,13,24" />
+      <scope id="6047094888109552696" at="8,44,15,37">
+        <var name="testValue" id="6047094888109552696" />
+      </scope>
+      <scope id="6047094888109552696" at="8,0,17,0">
+        <var name="value" id="6047094888109552696" />
+      </scope>
+      <unit id="6047094888109552696" at="7,0,18,0" name="DateTime.structure.Year_PropertySupport" />
+    </file>
+  </root>
+</debug-info>
+

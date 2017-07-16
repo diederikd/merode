@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/DateTime/DateTime.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/Object/Objects.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/ObjectType/ObjectType.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/ObjectType/sandbox/Meta.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/Specification/Specification.mpl" folder="" />
+    </projectModules>
+  </component>
+</project>

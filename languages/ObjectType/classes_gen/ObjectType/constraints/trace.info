@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="ConstraintsAspectDescriptor.java">
+      <unit at="13,0,29,0" name="ObjectType.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:94f5ec65-5a74-4f23-a86b-ad49d49f5f1d(ObjectType.constraints)/6047094888109878401">
+    <file name="Relation_Constraints.java">
+      <node id="6047094888109878401" at="21,33,22,137" concept="5" />
+      <node id="6047094888109878401" at="26,90,27,131" concept="3" />
+      <node id="6047094888109878401" at="30,52,31,20" concept="4" />
+      <node id="6047094888109878401" at="34,116,35,20" concept="4" />
+      <node id="6047094888109878417" at="38,119,39,76" concept="3" />
+      <node id="6047094888109881743" at="39,76,40,195" concept="1" />
+      <node id="6047094888109878401" at="44,56,45,42" concept="4" />
+      <node id="6047094888109878401" at="47,7,48,22" concept="4" />
+      <node id="6047094888109878401" at="21,0,24,0" concept="0" trace="Relation_Constraints#()V" />
+      <node id="6047094888109878401" at="29,0,33,0" concept="2" trace="hasOwnOnReferenceSetHandler#()Z" />
+      <node id="6047094888109878401" at="33,0,37,0" concept="2" trace="validate#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="6047094888109878401" at="37,0,42,0" concept="2" trace="onReferenceSet#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="6047094888109878401" at="42,0,47,0" concept="2" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="6047094888109878401" at="27,131,47,7" concept="1" />
+      <node id="6047094888109878401" at="25,0,50,0" concept="2" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="6047094888109878401" at="21,33,22,137" />
+      <scope id="6047094888109878401" at="30,52,31,20" />
+      <scope id="6047094888109878401" at="34,116,35,20" />
+      <scope id="6047094888109878401" at="44,56,45,42" />
+      <scope id="6047094888109878405" at="38,119,40,195">
+        <var name="objectType" id="6047094888109878420" />
+      </scope>
+      <scope id="6047094888109878401" at="21,0,24,0" />
+      <scope id="6047094888109878401" at="29,0,33,0" />
+      <scope id="6047094888109878401" at="33,0,37,0">
+        <var name="newReferentNode" id="6047094888109878401" />
+        <var name="oldReferentNode" id="6047094888109878401" />
+        <var name="referenceNode" id="6047094888109878401" />
+      </scope>
+      <scope id="6047094888109878401" at="37,0,42,0">
+        <var name="newReferentNode" id="6047094888109878401" />
+        <var name="oldReferentNode" id="6047094888109878401" />
+        <var name="referenceNode" id="6047094888109878401" />
+      </scope>
+      <scope id="6047094888109878401" at="42,0,47,0" />
+      <scope id="6047094888109878401" at="26,90,48,22">
+        <var name="references" id="6047094888109878401" />
+      </scope>
+      <scope id="6047094888109878401" at="25,0,50,0" />
+      <unit id="6047094888109878401" at="45,19,45,41" name="ObjectType.constraints.Relation_Constraints$1$1" />
+      <unit id="6047094888109878401" at="28,154,47,5" name="ObjectType.constraints.Relation_Constraints$1" />
+      <unit id="6047094888109878401" at="20,0,51,0" name="ObjectType.constraints.Relation_Constraints" />
+    </file>
+  </root>
+</debug-info>
+
