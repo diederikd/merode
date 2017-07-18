@@ -1,14 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root>
     <file name="ConceptPresentationAspectImpl.java">
-      <unit at="11,0,61,0" name="ObjectType.structure.ConceptPresentationAspectImpl" />
+      <unit at="11,0,67,0" name="ObjectType.structure.ConceptPresentationAspectImpl" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <unit at="10,0,52,0" name="ObjectType.structure.LanguageConceptSwitch" />
+      <unit at="10,0,56,0" name="ObjectType.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="14,0,180,0" name="ObjectType.structure.StructureAspectDescriptor" />
+      <unit at="14,0,203,0" name="ObjectType.structure.StructureAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/6047094888112167083">
+    <file name="MethodType.java">
+      <node id="6047094888112167083" at="14,0,15,0" concept="2" trace="myName" />
+      <node id="6047094888112167083" at="15,27,16,18" concept="6" />
+      <node id="6047094888112167083" at="18,0,19,0" concept="2" trace="myValue" />
+      <node id="6047094888112167083" at="19,49,20,18" concept="1" />
+      <node id="6047094888112167083" at="20,18,21,20" concept="1" />
+      <node id="6047094888112167083" at="23,28,24,19" concept="6" />
+      <node id="6047094888112167083" at="26,36,27,19" concept="6" />
+      <node id="6047094888112167083" at="29,49,30,80" concept="5" />
+      <node id="6047094888112167083" at="30,80,31,57" concept="1" />
+      <node id="6047094888112167083" at="31,57,32,57" concept="1" />
+      <node id="6047094888112167083" at="32,57,33,57" concept="1" />
+      <node id="6047094888112167083" at="33,57,34,16" concept="6" />
+      <node id="6047094888112167083" at="36,41,37,16" concept="6" />
+      <node id="6047094888112167083" at="40,24,41,37" concept="6" />
+      <node id="6047094888112167083" at="43,56,44,26" concept="6" />
+      <node id="6047094888112167083" at="46,56,47,26" concept="6" />
+      <node id="6047094888112167083" at="49,56,50,26" concept="6" />
+      <node id="6047094888112167083" at="51,5,52,35" concept="6" />
+      <node id="6047094888112167083" at="15,0,18,0" concept="4" trace="getName#()Ljava/lang/String;" />
+      <node id="6047094888112167083" at="23,0,26,0" concept="4" trace="getValue#()Ljava/lang/String;" />
+      <node id="6047094888112167083" at="26,0,29,0" concept="4" trace="getValueAsString#()Ljava/lang/String;" />
+      <node id="6047094888112167083" at="36,0,39,0" concept="7" trace="getDefault#()LObjectType/structure/MethodType;" />
+      <node id="6047094888112167083" at="39,53,42,5" concept="3" />
+      <node id="6047094888112167083" at="42,5,45,5" concept="3" />
+      <node id="6047094888112167083" at="45,5,48,5" concept="3" />
+      <node id="6047094888112167083" at="48,5,51,5" concept="3" />
+      <node id="6047094888112167083" at="19,0,23,0" concept="0" trace="MethodType#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="6047094888112167083" at="29,0,36,0" concept="7" trace="getConstants#()Ljava/util/List;" />
+      <node id="6047094888112167083" at="39,0,54,0" concept="7" trace="parseValue#(Ljava/lang/String;)LObjectType/structure/MethodType;" />
+      <scope id="6047094888112167083" at="15,27,16,18" />
+      <scope id="6047094888112167083" at="23,28,24,19" />
+      <scope id="6047094888112167083" at="26,36,27,19" />
+      <scope id="6047094888112167083" at="36,41,37,16" />
+      <scope id="6047094888112167083" at="40,24,41,37" />
+      <scope id="6047094888112167083" at="43,56,44,26" />
+      <scope id="6047094888112167083" at="46,56,47,26" />
+      <scope id="6047094888112167083" at="49,56,50,26" />
+      <scope id="6047094888112167083" at="19,49,21,20" />
+      <scope id="6047094888112167083" at="15,0,18,0" />
+      <scope id="6047094888112167083" at="23,0,26,0" />
+      <scope id="6047094888112167083" at="26,0,29,0" />
+      <scope id="6047094888112167083" at="36,0,39,0" />
+      <scope id="6047094888112167083" at="19,0,23,0">
+        <var name="name" id="6047094888112167083" />
+        <var name="value" id="6047094888112167083" />
+      </scope>
+      <scope id="6047094888112167083" at="29,49,34,16">
+        <var name="list" id="6047094888112167083" />
+      </scope>
+      <scope id="6047094888112167083" at="29,0,36,0" />
+      <scope id="6047094888112167083" at="39,53,52,35" />
+      <scope id="6047094888112167083" at="39,0,54,0">
+        <var name="value" id="6047094888112167083" />
+      </scope>
+      <unit id="6047094888112167083" at="9,0,55,0" name="ObjectType.structure.MethodType" />
+    </file>
+    <file name="MethodType_PropertySupport.java">
+      <node id="6047094888112167083" at="11,24,12,18" concept="6" />
+      <node id="6047094888112167083" at="13,5,14,97" concept="5" />
+      <node id="6047094888112167083" at="15,33,16,45" concept="5" />
+      <node id="6047094888112167083" at="17,45,18,20" concept="6" />
+      <node id="6047094888112167083" at="20,5,21,17" concept="6" />
+      <node id="6047094888112167083" at="24,24,25,18" concept="6" />
+      <node id="6047094888112167083" at="26,5,27,97" concept="5" />
+      <node id="6047094888112167083" at="28,33,29,45" concept="5" />
+      <node id="6047094888112167083" at="30,45,31,43" concept="6" />
+      <node id="6047094888112167083" at="33,5,34,16" concept="6" />
+      <node id="6047094888112167083" at="36,49,37,55" concept="5" />
+      <node id="6047094888112167083" at="38,27,39,32" concept="6" />
+      <node id="6047094888112167083" at="40,5,41,27" concept="6" />
+      <node id="6047094888112167083" at="10,44,13,5" concept="3" />
+      <node id="6047094888112167083" at="16,45,19,7" concept="3" />
+      <node id="6047094888112167083" at="23,47,26,5" concept="3" />
+      <node id="6047094888112167083" at="29,45,32,7" concept="3" />
+      <node id="6047094888112167083" at="37,55,40,5" concept="3" />
+      <node id="6047094888112167083" at="14,97,20,5" concept="8" />
+      <node id="6047094888112167083" at="27,97,33,5" concept="8" />
+      <node id="6047094888112167083" at="36,0,43,0" concept="4" trace="fromInternalValue#(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="6047094888112167083" at="10,0,23,0" concept="4" trace="canSetValue#(Ljava/lang/String;)Z" />
+      <node id="6047094888112167083" at="23,0,36,0" concept="4" trace="toInternalValue#(Ljava/lang/String;)Ljava/lang/String;" />
+      <scope id="6047094888112167083" at="11,24,12,18" />
+      <scope id="6047094888112167083" at="17,45,18,20" />
+      <scope id="6047094888112167083" at="24,24,25,18" />
+      <scope id="6047094888112167083" at="30,45,31,43" />
+      <scope id="6047094888112167083" at="38,27,39,32" />
+      <scope id="6047094888112167083" at="15,33,19,7">
+        <var name="constant" id="6047094888112167083" />
+      </scope>
+      <scope id="6047094888112167083" at="28,33,32,7">
+        <var name="constant" id="6047094888112167083" />
+      </scope>
+      <scope id="6047094888112167083" at="36,49,41,27">
+        <var name="constant" id="6047094888112167083" />
+      </scope>
+      <scope id="6047094888112167083" at="36,0,43,0">
+        <var name="value" id="6047094888112167083" />
+      </scope>
+      <scope id="6047094888112167083" at="10,44,21,17">
+        <var name="constants" id="6047094888112167083" />
+      </scope>
+      <scope id="6047094888112167083" at="23,47,34,16">
+        <var name="constants" id="6047094888112167083" />
+      </scope>
+      <scope id="6047094888112167083" at="10,0,23,0">
+        <var name="value" id="6047094888112167083" />
+      </scope>
+      <scope id="6047094888112167083" at="23,0,36,0">
+        <var name="value" id="6047094888112167083" />
+      </scope>
+      <unit id="6047094888112167083" at="9,0,44,0" name="ObjectType.structure.MethodType_PropertySupport" />
     </file>
   </root>
 </debug-info>

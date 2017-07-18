@@ -12,6 +12,6 @@ public class Year_PropertySupport extends PropertySupport {
     } else {
       testValue = value;
     }
-    return testValue.matches("9999");
+    return testValue.matches("[0-9][0-9][0-9][0-9]");
   }
 }

@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="2bjx" ref="r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)" />
+    <import index="nvit" ref="r:e4e9cd54-c712-47ad-a551-140b5440c2a7(Objects.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -42,19 +43,11 @@
     <property role="TrG5h" value="Specification" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="5fFAcc8Qy1U" role="1TKVEi">
-      <property role="IQ2ns" value="6047094888109580410" />
+    <node concept="1TJgyj" id="5fFAcc95v0z" role="1TKVEi">
+      <property role="IQ2ns" value="6047094888113500195" />
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="objecttypes" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" to="2bjx:5fFAcc8Qr4w" resolve="ObjectType" />
-    </node>
-    <node concept="1TJgyj" id="5fFAcc8SnRF" role="1TKVEi">
-      <property role="IQ2ns" value="6047094888110063083" />
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="eventtypes" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" to="2bjx:5fFAcc8SnNV" resolve="EventType" />
+      <property role="20kJfa" value="model" />
+      <ref role="20lvS9" to="2bjx:5fFAcc95v0q" resolve="ObjectEventModel" />
     </node>
     <node concept="1TJgyj" id="5fFAcc8Ukdm" role="1TKVEi">
       <property role="IQ2ns" value="6047094888110572374" />
@@ -64,6 +57,19 @@
     </node>
     <node concept="PrWs8" id="5fFAcc8TDek" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="32hkrHBme2S">
+    <property role="EcuMT" value="3499668250778198200" />
+    <property role="TrG5h" value="Data" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="32hkrHBmeBS" role="1TKVEi">
+      <property role="IQ2ns" value="3499668250778200568" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="sets" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" to="nvit:32hkrHBm748" resolve="SetObjectInstances" />
     </node>
   </node>
 </model>

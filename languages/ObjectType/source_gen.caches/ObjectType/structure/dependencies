@@ -17,6 +17,19 @@
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SConceptId" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
   </dependency>
+  <dependency className="ObjectType.structure.MethodType" file="MethodType.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.LinkedList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+  </dependency>
+  <dependency className="ObjectType.structure.MethodType_PropertySupport" file="MethodType_PropertySupport.java">
+    <classNode dependClassName="ObjectType.structure.MethodType" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode extendsClassName="jetbrains.mps.smodel.PropertySupport" />
+  </dependency>
   <dependency className="ObjectType.structure.StructureAspectDescriptor" file="StructureAspectDescriptor.java">
     <classNode dependClassName="ObjectType.structure.LanguageConceptSwitch" />
     <classNode dependClassName="java.lang.Override" />

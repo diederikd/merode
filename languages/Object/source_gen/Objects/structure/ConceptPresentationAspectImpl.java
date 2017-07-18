@@ -9,18 +9,36 @@ import org.jetbrains.annotations.Nullable;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
-  private final ConceptPresentation props_Object2 = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_DateValue = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_ObjectInstance = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_ObjectInstanceValue = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_PropertyValue = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_SetObjectInstances = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_StringValue = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Validity = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_Value = new ConceptPresentationBuilder().create();
 
   @Override
   @Nullable
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
-      case LanguageConceptSwitch.Object2:
-        return props_Object2;
+      case LanguageConceptSwitch.DateValue:
+        return props_DateValue;
+      case LanguageConceptSwitch.ObjectInstance:
+        return props_ObjectInstance;
+      case LanguageConceptSwitch.ObjectInstanceValue:
+        return props_ObjectInstanceValue;
+      case LanguageConceptSwitch.PropertyValue:
+        return props_PropertyValue;
+      case LanguageConceptSwitch.SetObjectInstances:
+        return props_SetObjectInstances;
+      case LanguageConceptSwitch.StringValue:
+        return props_StringValue;
       case LanguageConceptSwitch.Validity:
         return props_Validity;
+      case LanguageConceptSwitch.Value:
+        return props_Value;
     }
     return null;
   }

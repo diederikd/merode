@@ -244,7 +244,7 @@
   </node>
   <node concept="Az7Fb" id="5fFAcc8QrgS">
     <property role="TrG5h" value="Year" />
-    <property role="FLfZY" value="9999" />
+    <property role="FLfZY" value="[0-9][0-9][0-9][0-9]" />
   </node>
 </model>
 

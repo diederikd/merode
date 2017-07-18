@@ -12,6 +12,7 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptData = createDescriptorForData();
   /*package*/ final ConceptDescriptor myConceptSpecification = createDescriptorForSpecification();
   private final LanguageConceptSwitch myConceptIndex;
 
@@ -21,13 +22,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptSpecification);
+    return Arrays.asList(myConceptData, myConceptSpecification);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myConceptIndex.index(id)) {
+      case LanguageConceptSwitch.Data:
+        return myConceptData;
       case LanguageConceptSwitch.Specification:
         return myConceptSpecification;
       default:
@@ -39,13 +42,19 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myConceptIndex.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForData() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Specification", "Data", 0x40b7f9cd2341434aL, 0xa23eae796e75a4d8L, 0x309151bb6758e0b8L);
+    b.class_(false, false, true);
+    b.origin("r:f78cea42-5ad4-4a39-960f-415f5b1aa24d(Specification.structure)/3499668250778198200");
+    b.aggregate("sets", 0x309151bb6758e9f8L).target(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb67587108L).optional(true).ordered(true).multiple(true).origin("3499668250778200568").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForSpecification() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Specification", "Specification", 0x40b7f9cd2341434aL, 0xa23eae796e75a4d8L, 0x53eb98c308da2079L);
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:f78cea42-5ad4-4a39-960f-415f5b1aa24d(Specification.structure)/6047094888109580409");
-    b.aggregate("objecttypes", 0x53eb98c308da207aL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L).optional(true).ordered(true).multiple(true).origin("6047094888109580410").done();
-    b.aggregate("eventtypes", 0x53eb98c308e17debL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e17cfbL).optional(true).ordered(true).multiple(true).origin("6047094888110063083").done();
+    b.aggregate("model", 0x53eb98c30915f023L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c30915f01aL).optional(true).ordered(true).multiple(false).origin("6047094888113500195").done();
     b.aggregate("OET", 0x53eb98c308e94356L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e69c16L).optional(true).ordered(true).multiple(false).origin("6047094888110572374").done();
     return b.create();
   }

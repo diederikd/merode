@@ -9,17 +9,19 @@ import org.jetbrains.annotations.Nullable;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private final ConceptPresentation props_AbstractMethod = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_AbstractProperty = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_AbstractPropertyReference = new ConceptPresentationBuilder().create();
-  private final ConceptPresentation props_Date = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_DateType = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_EventType = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Method = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_OET = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_ObjectEventModel = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_ObjectType = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Property = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_PropertyType = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Relation = new ConceptPresentationBuilder().create();
-  private final ConceptPresentation props_String = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_StringType = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_ValidFromPoperty = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_ValidToPoperty = new ConceptPresentationBuilder().create();
 
@@ -28,18 +30,22 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.AbstractMethod:
+        return props_AbstractMethod;
       case LanguageConceptSwitch.AbstractProperty:
         return props_AbstractProperty;
       case LanguageConceptSwitch.AbstractPropertyReference:
         return props_AbstractPropertyReference;
-      case LanguageConceptSwitch.Date:
-        return props_Date;
+      case LanguageConceptSwitch.DateType:
+        return props_DateType;
       case LanguageConceptSwitch.EventType:
         return props_EventType;
       case LanguageConceptSwitch.Method:
         return props_Method;
       case LanguageConceptSwitch.OET:
         return props_OET;
+      case LanguageConceptSwitch.ObjectEventModel:
+        return props_ObjectEventModel;
       case LanguageConceptSwitch.ObjectType:
         return props_ObjectType;
       case LanguageConceptSwitch.Property:
@@ -48,8 +54,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         return props_PropertyType;
       case LanguageConceptSwitch.Relation:
         return props_Relation;
-      case LanguageConceptSwitch.String:
-        return props_String;
+      case LanguageConceptSwitch.StringType:
+        return props_StringType;
       case LanguageConceptSwitch.ValidFromPoperty:
         return props_ValidFromPoperty;
       case LanguageConceptSwitch.ValidToPoperty:

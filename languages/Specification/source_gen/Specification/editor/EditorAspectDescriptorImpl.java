@@ -18,6 +18,8 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
     SAbstractConcept cncpt = ((SAbstractConcept) concept);
     switch (index_xbvbvu_a0a.index(cncpt)) {
       case 0:
+        return Collections.<ConceptEditor>singletonList(new Data_Editor());
+      case 1:
         return Collections.<ConceptEditor>singletonList(new Specification_Editor());
       default:
     }
@@ -26,5 +28,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
 
 
-  private static final ConceptSwitchIndex index_xbvbvu_a0a = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x40b7f9cd2341434aL, 0xa23eae796e75a4d8L, 0x53eb98c308da2079L)).seal();
+  private static final ConceptSwitchIndex index_xbvbvu_a0a = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x40b7f9cd2341434aL, 0xa23eae796e75a4d8L, 0x309151bb6758e0b8L), MetaIdFactory.conceptId(0x40b7f9cd2341434aL, 0xa23eae796e75a4d8L, 0x53eb98c308da2079L)).seal();
 }

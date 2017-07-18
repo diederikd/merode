@@ -4,6 +4,7 @@
     <classNode dependClassName="ObjectType.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="ObjectType.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="ObjectType.editor.EditorAspectDescriptorImpl" />
+    <classNode dependClassName="ObjectType.intentions.IntentionsDescriptor" />
     <classNode dependClassName="ObjectType.migration.MigrationDescriptor" />
     <classNode dependClassName="ObjectType.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="ObjectType.structure.StructureAspectDescriptor" />
@@ -14,6 +15,7 @@
     <classNode dependClassName="java.util.Collection" />
     <classNode dependClassName="jetbrains.mps.generator.runtime.TemplateModule" />
     <classNode dependClassName="jetbrains.mps.generator.runtime.TemplateUtil" />
+    <classNode dependClassName="jetbrains.mps.intentions.IntentionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.lang.migration.runtime.base.MigrationAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />

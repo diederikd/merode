@@ -47,6 +47,7 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="false">2f2b62d8-f252-48cc-8e79-f44966765664(ObjectType)</dependency>
+    <dependency reexport="false">cab25696-e7a8-4bc6-80eb-639299db8d07(Objects)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="5" />
@@ -87,6 +88,7 @@
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="2f2b62d8-f252-48cc-8e79-f44966765664(ObjectType)" version="1" />
+    <module reference="cab25696-e7a8-4bc6-80eb-639299db8d07(Objects)" version="0" />
     <module reference="40b7f9cd-2341-434a-a23e-ae796e75a4d8(Specification)" version="0" />
     <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
     <module reference="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" version="0" />
