@@ -106,6 +106,9 @@
       <property role="20kJfa" value="value" />
       <ref role="20lvS9" node="32hkrHBkYGW" resolve="Value" />
     </node>
+    <node concept="PrWs8" id="3H8iERPFFLv" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
   </node>
   <node concept="1TIwiD" id="32hkrHBkYGW">
     <property role="EcuMT" value="3499668250777873212" />

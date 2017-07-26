@@ -15,8 +15,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAbstractMethod = createDescriptorForAbstractMethod();
   /*package*/ final ConceptDescriptor myConceptAbstractProperty = createDescriptorForAbstractProperty();
   /*package*/ final ConceptDescriptor myConceptAbstractPropertyReference = createDescriptorForAbstractPropertyReference();
+  /*package*/ final ConceptDescriptor myConceptAssignment = createDescriptorForAssignment();
   /*package*/ final ConceptDescriptor myConceptDateType = createDescriptorForDateType();
   /*package*/ final ConceptDescriptor myConceptEventType = createDescriptorForEventType();
+  /*package*/ final ConceptDescriptor myConceptExpression = createDescriptorForExpression();
+  /*package*/ final ConceptDescriptor myConceptISetDefaultToday = createDescriptorForISetDefaultToday();
+  /*package*/ final ConceptDescriptor myConceptInputProperty = createDescriptorForInputProperty();
+  /*package*/ final ConceptDescriptor myConceptInputPropertyReference = createDescriptorForInputPropertyReference();
   /*package*/ final ConceptDescriptor myConceptMethod = createDescriptorForMethod();
   /*package*/ final ConceptDescriptor myConceptOET = createDescriptorForOET();
   /*package*/ final ConceptDescriptor myConceptObjectEventModel = createDescriptorForObjectEventModel();
@@ -35,7 +40,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractMethod, myConceptAbstractProperty, myConceptAbstractPropertyReference, myConceptDateType, myConceptEventType, myConceptMethod, myConceptOET, myConceptObjectEventModel, myConceptObjectType, myConceptProperty, myConceptPropertyType, myConceptRelation, myConceptStringType, myConceptValidFromPoperty, myConceptValidToPoperty);
+    return Arrays.asList(myConceptAbstractMethod, myConceptAbstractProperty, myConceptAbstractPropertyReference, myConceptAssignment, myConceptDateType, myConceptEventType, myConceptExpression, myConceptISetDefaultToday, myConceptInputProperty, myConceptInputPropertyReference, myConceptMethod, myConceptOET, myConceptObjectEventModel, myConceptObjectType, myConceptProperty, myConceptPropertyType, myConceptRelation, myConceptStringType, myConceptValidFromPoperty, myConceptValidToPoperty);
   }
 
   @Override
@@ -48,10 +53,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAbstractProperty;
       case LanguageConceptSwitch.AbstractPropertyReference:
         return myConceptAbstractPropertyReference;
+      case LanguageConceptSwitch.Assignment:
+        return myConceptAssignment;
       case LanguageConceptSwitch.DateType:
         return myConceptDateType;
       case LanguageConceptSwitch.EventType:
         return myConceptEventType;
+      case LanguageConceptSwitch.Expression:
+        return myConceptExpression;
+      case LanguageConceptSwitch.ISetDefaultToday:
+        return myConceptISetDefaultToday;
+      case LanguageConceptSwitch.InputProperty:
+        return myConceptInputProperty;
+      case LanguageConceptSwitch.InputPropertyReference:
+        return myConceptInputPropertyReference;
       case LanguageConceptSwitch.Method:
         return myConceptMethod;
       case LanguageConceptSwitch.OET:
@@ -91,6 +106,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ObjectType", "AbstractProperty", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL);
     b.class_(false, true, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59296fcL);
     b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/6047094888109796444");
     return b.create();
   }
@@ -99,6 +115,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/6047094888110111785");
     b.associate("abstractProperty", 0x53eb98c308e23c2aL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL).optional(false).origin("6047094888110111786").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForAssignment() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ObjectType", "Assignment", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd152L);
+    b.class_(false, false, false);
+    b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/4680873378918027602");
+    b.associate("assignedTo", 0x40f5cd89acfdd153L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL).optional(false).origin("4680873378918027603").done();
+    b.aggregate("theAssigned", 0x40f5cd89ad003c77L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd155L).optional(true).ordered(true).multiple(false).origin("4680873378918186103").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDateType() {
@@ -115,15 +139,46 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/6047094888110062843");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ObjectType", "Expression", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd155L);
+    b.class_(false, true, false);
+    b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/4680873378918027605");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForISetDefaultToday() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ObjectType", "ISetDefaultToday", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59296fcL);
+    b.interface_();
+    b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/4271746357570737916");
+    b.prop("setDefaultToday", 0x3b484aadf59296fdL, "4271746357570737917");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForInputProperty() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ObjectType", "InputProperty", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59a7833L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/4271746357571254323");
+    b.associate("property", 0x3b484aadf59a7834L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL).optional(false).origin("4271746357571254324").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForInputPropertyReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ObjectType", "InputPropertyReference", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd157L);
+    b.class_(false, false, false);
+    b.super_("ObjectType.structure.Expression", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd155L);
+    b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/4680873378918027607");
+    b.associate("inputProperty", 0x40f5cd89acfdd158L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59a7833L).optional(false).origin("4680873378918027608").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForMethod() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ObjectType", "Method", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L);
     b.class_(false, false, false);
     b.super_("ObjectType.structure.AbstractMethod", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x309151bb67298e3eL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/6047094888110111778");
     b.prop("type", 0x53eb98c3090198b9L, "6047094888112167097");
     b.associate("event", 0x53eb98c308e23c23L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e17cfbL).optional(false).origin("6047094888110111779").done();
     b.associate("object", 0x53eb98c3090198a4L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L).optional(false).origin("6047094888112167076").done();
-    b.aggregate("properties", 0x53eb98c308e23c2fL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c29L).optional(true).ordered(true).multiple(true).origin("6047094888110111791").done();
+    b.aggregate("properties", 0x53eb98c308e23c2fL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59a7833L).optional(true).ordered(true).multiple(true).origin("6047094888110111791").done();
+    b.aggregate("assigments", 0x40f5cd89ad003c7cL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd152L).optional(true).ordered(true).multiple(true).origin("4680873378918186108").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForOET() {
@@ -148,6 +203,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/6047094888109551904");
     b.prop("timedObject", 0x53eb98c308e17cf9L, "6047094888110062841");
     b.aggregate("properties", 0x53eb98c308d9bb25L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL).optional(true).ordered(true).multiple(true).origin("6047094888109554469").done();
+    b.aggregate("identifiying", 0x3b484aadf5078b7bL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c29L).optional(true).ordered(true).multiple(true).origin("4271746357561625467").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProperty() {
@@ -188,6 +244,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.super_("ObjectType.structure.AbstractProperty", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59296fcL);
     b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/6047094888110018841");
     return b.create();
   }
@@ -196,6 +253,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.super_("ObjectType.structure.AbstractProperty", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59296fcL);
     b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/6047094888110018844");
     return b.create();
   }

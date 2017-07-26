@@ -9,12 +9,13 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import ObjectType.editor.ObjectTypeStylesheet_StyleSheet.LargeStyleClass;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
-import jetbrains.mps.openapi.editor.style.Style;
-import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.EditorManager;
 import com.mbeddr.mpsutil.editor.querylist.runtime.QueryListContext;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
@@ -63,18 +64,36 @@ import jetbrains.mps.editor.runtime.impl.CellUtil;
     editorCell.setCellId("Collection_koyvu4_a");
     editorCell.setBig(true);
     editorCell.setCellContext(getCellFactory().getCellContext());
-    editorCell.addEditorCell(createConstant_koyvu4_a0());
-    editorCell.addEditorCell(createProperty_koyvu4_b0());
+    editorCell.addEditorCell(createCollection_koyvu4_a0());
+    editorCell.addEditorCell(createConstant_koyvu4_b0());
     editorCell.addEditorCell(createCollection_koyvu4_c0());
     return editorCell;
   }
-  private EditorCell createConstant_koyvu4_a0() {
+  private EditorCell createCollection_koyvu4_a0() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_koyvu4_a0");
+    Style style = new StyleImpl();
+    new LargeStyleClass(getEditorContext(), getNode()).apply(style, editorCell);
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_koyvu4_a0a());
+    editorCell.addEditorCell(createConstant_koyvu4_b0a());
+    editorCell.addEditorCell(createProperty_koyvu4_c0a());
+    return editorCell;
+  }
+  private EditorCell createConstant_koyvu4_a0a() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "event type");
-    editorCell.setCellId("Constant_koyvu4_a0");
+    editorCell.setCellId("Constant_koyvu4_a0a");
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createProperty_koyvu4_b0() {
+  private EditorCell createConstant_koyvu4_b0a() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ":");
+    editorCell.setCellId("Constant_koyvu4_b0a");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createProperty_koyvu4_c0a() {
     CellProviderWithRole provider = new PropertyCellProvider(myNode, getEditorContext());
     provider.setRole("name");
     provider.setNoTargetText("<no name>");
@@ -90,6 +109,15 @@ import jetbrains.mps.editor.runtime.impl.CellUtil;
       EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
       return manager.createNodeRoleAttributeCell(attributeConcept, provider.getRoleAttributeKind(), editorCell);
     } else
+    return editorCell;
+  }
+  private EditorCell createConstant_koyvu4_b0() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_koyvu4_b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createCollection_koyvu4_c0() {

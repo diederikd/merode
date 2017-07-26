@@ -42,6 +42,7 @@ import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
     editorCell.setCellId("Collection_j3qtj4_a");
     editorCell.setBig(true);
     editorCell.setCellContext(getCellFactory().getCellContext());
+    editorCell.addKeyMap(new NewDefaultValue());
     editorCell.addEditorCell(createRefNode_j3qtj4_a0());
     return editorCell;
   }
@@ -81,7 +82,6 @@ import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
       if (editorCell.getRole() == null) {
         editorCell.setRole("value");
       }
-      editorCell.addKeyMap(new NewValue());
     }
     @Override
     protected EditorCell createEmptyCell() {

@@ -8,6 +8,7 @@
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
   <dependency className="Specification.editor.Data_EditorBuilder_a" file="Data_EditorBuilder_a.java">
+    <classNode dependClassName="ObjectType.editor.ObjectTypeStylesheet_StyleSheet.VeryLargeStyleClass" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
@@ -52,6 +53,7 @@
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
   <dependency className="Specification.editor.Specification_EditorBuilder_a" file="Specification_EditorBuilder_a.java">
+    <classNode dependClassName="ObjectType.editor.ObjectTypeStylesheet_StyleSheet.VeryLargeStyleClass" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart" />

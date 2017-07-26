@@ -41,6 +41,14 @@ public final class IntentionsDescriptor extends IntentionAspectBase {
         break;
       case 1:
         if (true) {
+          // Concept: ObjectType 
+          intentions = new IntentionFactory[2];
+          intentions[0] = new SwitchToTimed_Intention();
+          intentions[1] = new SwitchToNotTimed_Intention();
+        }
+        break;
+      case 2:
+        if (true) {
           // Concept: Relation 
           intentions = new IntentionFactory[1];
           intentions[0] = new SwitchToMultiple_Intention();
@@ -55,11 +63,13 @@ public final class IntentionsDescriptor extends IntentionAspectBase {
   @NotNull
   @Override
   public Collection<IntentionFactory> getAllIntentions() {
-    IntentionFactory[] rv = new IntentionFactory[3];
+    IntentionFactory[] rv = new IntentionFactory[5];
     rv[0] = new ChangeTo_Intention();
     rv[1] = new DeleteMethod_Intention();
     rv[2] = new SwitchToMultiple_Intention();
+    rv[3] = new SwitchToTimed_Intention();
+    rv[4] = new SwitchToNotTimed_Intention();
     return Arrays.asList(rv);
   }
-  private static final ConceptSwitchIndex index_hphjzv_d0f = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dae2f3L)).seal();
+  private static final ConceptSwitchIndex index_hphjzv_d0f = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dae2f3L)).seal();
 }

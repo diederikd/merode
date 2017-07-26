@@ -11,13 +11,17 @@ import java.util.HashMap;
 import jetbrains.mps.smodel.runtime.base.BasePropertyConstraintsDescriptor;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import Objects.behavior.ObjectInstance__BehaviorDescriptor;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.base.BaseReferenceConstraintsDescriptor;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.smodel.action.SNodeFactoryOperations;
+import DateTime.behavior.Date__BehaviorDescriptor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.runtime.ReferenceScopeProvider;
 import jetbrains.mps.smodel.runtime.base.BaseScopeProvider;
@@ -38,7 +42,7 @@ public class ObjectInstance_Constraints extends BaseConstraintsDescriptor {
       @Override
       public Object getValue(SNode node) {
         String propertyName = "name";
-        return SPropertyOperations.getString(SLinkOperations.getTarget(node, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x53eb98c308da284cL, 0x53eb98c308da284dL, "objectType")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+        return ObjectInstance__BehaviorDescriptor.getUniqueName_id3H8iERP5hpk.invoke(node);
       }
     });
     return properties;
@@ -60,6 +64,21 @@ public class ObjectInstance_Constraints extends BaseConstraintsDescriptor {
         for (SNode property : ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(referenceNode, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x53eb98c308da284cL, 0x53eb98c308da284dL, "objectType")), MetaAdapterFactory.getContainmentLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L, 0x53eb98c308d9bb25L, "properties")))) {
           SNode propertyValue = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, "Objects.structure.PropertyValue"));
           SLinkOperations.setTarget(propertyValue, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753eb3aL, "property"), property);
+          {
+            final SNode setDefaultToday = property;
+            if (SNodeOperations.isInstanceOf(setDefaultToday, MetaAdapterFactory.getInterfaceConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59296fcL, "ObjectType.structure.ISetDefaultToday"))) {
+              if (SPropertyOperations.getBoolean(setDefaultToday, MetaAdapterFactory.getProperty(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59296fcL, 0x3b484aadf59296fdL, "setDefaultToday"))) {
+                SNodeFactoryOperations.setNewChild(propertyValue, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753ecceL, "value"), SNodeFactoryOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecc8L, "Objects.structure.DateValue")));
+                {
+                  final SNode dateValue = SLinkOperations.getTarget(propertyValue, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753ecceL, "value"));
+                  if (SNodeOperations.isInstanceOf(dateValue, MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecc8L, "Objects.structure.DateValue"))) {
+                    SNodeFactoryOperations.setNewChild(dateValue, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecc8L, 0x309151bb6753ecc9L, "value"), SNodeFactoryOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0x2bc0050f69d04772L, 0x99033735cb700947L, 0x53eb98c308d9b15eL, "DateTime.structure.Date")));
+                    Date__BehaviorDescriptor.setToNow_id3H8iERP_wVY.invoke(SLinkOperations.getTarget(dateValue, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecc8L, 0x309151bb6753ecc9L, "value")));
+                  }
+                }
+              }
+            }
+          }
           ListSequence.fromList(SLinkOperations.getChildren(referenceNode, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x53eb98c308da284cL, 0x309151bb6756faaeL, "propertyValues"))).addElement(propertyValue);
         }
       }

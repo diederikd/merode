@@ -88,6 +88,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForPropertyValue() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Objects", "PropertyValue", 0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L);
     b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:e4e9cd54-c712-47ad-a551-140b5440c2a7(Objects.structure)/3499668250777873209");
     b.associate("property", 0x309151bb6753eb3aL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL).optional(false).origin("3499668250777873210").done();
     b.aggregate("value", 0x309151bb6753ecceL).target(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb3cL).optional(true).ordered(true).multiple(false).origin("3499668250777873614").done();

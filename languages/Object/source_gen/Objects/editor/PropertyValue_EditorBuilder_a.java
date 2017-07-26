@@ -9,6 +9,10 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
+import jetbrains.mps.lang.editor.menus.transformation.DefaultTransformationMenuLookup;
+import jetbrains.mps.smodel.language.LanguageRegistry;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.RefCellCellProvider;
 import jetbrains.mps.util.Computable;
@@ -20,12 +24,10 @@ import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart;
 import jetbrains.mps.openapi.editor.cells.DefaultSubstituteInfo;
-import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 
 /*package*/ class PropertyValue_EditorBuilder_a extends AbstractEditorBuilder {
@@ -52,6 +54,8 @@ import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
     editorCell.setCellId("Collection_hrcg2g_a");
     editorCell.setBig(true);
     editorCell.setCellContext(getCellFactory().getCellContext());
+    editorCell.setTransformationMenuLookup(new DefaultTransformationMenuLookup(LanguageRegistry.getInstance(getEditorContext().getRepository()), MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, "Objects.structure.PropertyValue")));
+    editorCell.setSubstituteInfo(new SChildSubstituteInfo(editorCell));
     editorCell.addEditorCell(createRefCell_hrcg2g_a0());
     editorCell.addEditorCell(createConstant_hrcg2g_b0());
     editorCell.addEditorCell(createRefNode_hrcg2g_c0());
@@ -175,7 +179,7 @@ import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
       Style style = new StyleImpl();
       style.set(StyleAttributes.READ_ONLY, false);
       editorCell.getStyle().putAll(style);
-      editorCell.addKeyMap(new NewValue());
+      editorCell.addKeyMap(new NewDefaultValue());
     }
     @Override
     protected EditorCell createEmptyCell() {

@@ -7,6 +7,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import de.slisson.mps.tables.runtime.cells.TableEditor;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
@@ -58,10 +60,18 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
   }
 
   /*package*/ EditorCell createCell() {
-    return createTable_jektef_a_0();
+    return createCollection_jektef_a();
   }
 
-  private EditorCell createTable_jektef_a(final EditorContext editorContext, final SNode node) {
+  private EditorCell createCollection_jektef_a() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_jektef_a");
+    editorCell.setBig(true);
+    editorCell.setCellContext(getCellFactory().getCellContext());
+    editorCell.addEditorCell(createTable_jektef_a0_0());
+    return editorCell;
+  }
+  private EditorCell createTable_jektef_a0(final EditorContext editorContext, final SNode node) {
 
     final Wrappers._T<TableEditor> editorCell = new Wrappers._T<TableEditor>(null);
     _FunctionTypes._void_P0_E0 creator = new _FunctionTypes._void_P0_E0() {
@@ -77,25 +87,23 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
               // column headers 
               {
                 List<HeaderGrid> headerGrids = new ArrayList<HeaderGrid>(1);
-                headerGrids.add(createHeadQuery_jektef_a0(editorContext, node));
+                headerGrids.add(createHeadQuery_jektef_a0a(editorContext, node));
                 grid.setColumnHeaders(headerGrids);
               }
 
               // row headers 
               {
                 List<HeaderGrid> headerGrids = new ArrayList<HeaderGrid>(1);
-                headerGrids.add(createHeadQuery_jektef_a0_0(editorContext, node));
+                headerGrids.add(createHeadQuery_jektef_a0a_0(editorContext, node));
                 grid.setRowHeaders(headerGrids);
               }
-              final Grid childGrid = createTableCellQuery_jektef_a0(editorContext, node);
+              final Grid childGrid = createTableCellQuery_jektef_a0a(editorContext, node);
               childGrid.setSpanX(Math.max(1, grid.getColumnHeadersSizeX()));
               childGrid.setSpanY(Math.max(1, grid.getRowHeadersSizeY()));
               grid.setElement(0, 0, childGrid);
 
               editorCell.value = new TableEditor(editorContext, node, grid);
-              editorCell.value.setCellId("Table_jektef_a");
-              editorCell.value.setBig(true);
-              editorCell.value.setCellContext(getCellFactory().getCellContext());
+              editorCell.value.setCellId("Table_jektef_a0");
 
               editorCell.value.init();
             } finally {
@@ -112,10 +120,10 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
     return editorCell.value;
 
   }
-  private EditorCell createTable_jektef_a_0() {
-    return createTable_jektef_a(getEditorContext(), myNode);
+  private EditorCell createTable_jektef_a0_0() {
+    return createTable_jektef_a0(getEditorContext(), myNode);
   }
-  public HeaderGrid createHeadQuery_jektef_a0(final EditorContext editorContext, final SNode node) {
+  public HeaderGrid createHeadQuery_jektef_a0a(final EditorContext editorContext, final SNode node) {
     Object queryResult = new Object() {
       public Object query() {
         return SNodeOperations.getNodeDescendants(SNodeOperations.getParent(node), MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L, "ObjectType.structure.ObjectType"), false, new SAbstractConcept[]{});
@@ -137,7 +145,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 
     return grid;
   }
-  public HeaderGrid createHeadQuery_jektef_a0_0(final EditorContext editorContext, final SNode node) {
+  public HeaderGrid createHeadQuery_jektef_a0a_0(final EditorContext editorContext, final SNode node) {
     Object queryResult = new Object() {
       public Object query() {
         return SNodeOperations.getNodeDescendants(SNodeOperations.getParent(node), MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e17cfbL, "ObjectType.structure.EventType"), false, new SAbstractConcept[]{});
@@ -162,7 +170,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 
     return grid;
   }
-  public Grid createTableCellQuery_jektef_a0(final EditorContext editorContext, final SNode node) {
+  public Grid createTableCellQuery_jektef_a0a(final EditorContext editorContext, final SNode node) {
     final Grid grid = new Grid();
     final GridAdapter gridAdapter = new GridAdapter(grid, editorContext, node);
 

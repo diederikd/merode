@@ -4,6 +4,11 @@ package Objects.constraints;
 
 import jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.smodel.runtime.ConstraintFunction;
+import jetbrains.mps.smodel.runtime.ConstraintContext_CanBeParent;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import java.util.Map;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsDescriptor;
@@ -14,15 +19,34 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.action.SNodeFactoryOperations;
-import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.runtime.ReferenceScopeProvider;
 import jetbrains.mps.smodel.runtime.base.BaseScopeProvider;
+import org.jetbrains.mps.openapi.language.SAbstractConcept;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.smodel.SNodePointer;
 
 public class PropertyValue_Constraints extends BaseConstraintsDescriptor {
   public PropertyValue_Constraints() {
     super(MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, "Objects.structure.PropertyValue"));
   }
 
+  @Override
+  protected ConstraintFunction<ConstraintContext_CanBeParent, Boolean> calculateCanBeParentConstraint() {
+    return new ConstraintFunction<ConstraintContext_CanBeParent, Boolean>() {
+      @NotNull
+      public Boolean invoke(@NotNull ConstraintContext_CanBeParent context, @Nullable CheckingNodeContext checkingNodeContext) {
+        boolean result = staticCanBeAParent(context.getNode(), context.getChildNode(), context.getChildConcept(), context.getLink());
+
+        if (!(result) && checkingNodeContext != null) {
+          checkingNodeContext.setBreakingNode(canBeParentBreakingPoint);
+        }
+
+        return result;
+      }
+    };
+  }
   @Override
   protected Map<SReferenceLink, ReferenceConstraintsDescriptor> getSpecifiedReferences() {
     Map<SReferenceLink, ReferenceConstraintsDescriptor> references = new HashMap<SReferenceLink, ReferenceConstraintsDescriptor>();
@@ -58,4 +82,60 @@ public class PropertyValue_Constraints extends BaseConstraintsDescriptor {
     });
     return references;
   }
+  private static boolean staticCanBeAParent(SNode node, SNode childNode, SAbstractConcept childConcept, SContainmentLink link) {
+
+    {
+      final SNode property = SLinkOperations.getTarget(node, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753eb3aL, "property"));
+      if (SNodeOperations.isInstanceOf(property, MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b121L, "ObjectType.structure.Property"))) {
+        {
+          final SNode stringType = SLinkOperations.getTarget(property, MetaAdapterFactory.getContainmentLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b121L, 0x309151bb674e4de1L, "type"));
+          if (SNodeOperations.isInstanceOf(stringType, MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d117L, "ObjectType.structure.StringType"))) {
+            if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecb1L, "Objects.structure.StringValue"))) {
+              return true;
+            }
+          }
+        }
+        {
+          final SNode dateType = SLinkOperations.getTarget(property, MetaAdapterFactory.getContainmentLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b121L, 0x309151bb674e4de1L, "type"));
+          if (SNodeOperations.isInstanceOf(dateType, MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d118L, "ObjectType.structure.DateType"))) {
+            if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecc8L, "Objects.structure.DateValue"))) {
+              return true;
+            }
+          }
+        }
+      }
+    }
+    {
+      final SNode fromPoperty = SLinkOperations.getTarget(node, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753eb3aL, "property"));
+      if (SNodeOperations.isInstanceOf(fromPoperty, MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d119L, "ObjectType.structure.ValidFromPoperty"))) {
+        if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecc8L, "Objects.structure.DateValue"))) {
+          return true;
+        }
+      }
+    }
+    {
+      final SNode fromPoperty = SLinkOperations.getTarget(node, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753eb3aL, "property"));
+      if (SNodeOperations.isInstanceOf(fromPoperty, MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d11cL, "ObjectType.structure.ValidToPoperty"))) {
+        if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecc8L, "Objects.structure.DateValue"))) {
+          return true;
+        }
+      }
+    }
+    {
+      final SNode relation = SLinkOperations.getTarget(node, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753eb3aL, "property"));
+      if (SNodeOperations.isInstanceOf(relation, MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dae2f3L, "ObjectType.structure.Relation"))) {
+        if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecb1L, "Objects.structure.StringValue"))) {
+          return false;
+        }
+        if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecc8L, "Objects.structure.DateValue"))) {
+          return false;
+        }
+        if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), MetaAdapterFactory.getConcept(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb67599d18L, "Objects.structure.ObjectInstanceValue"))) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+  private static SNodePointer canBeParentBreakingPoint = new SNodePointer("r:b200232a-9da4-485f-b179-397f6092e9c7(Objects.constraints)", "4271746357563715911");
 }

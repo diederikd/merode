@@ -47,6 +47,7 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
     CellProviderWithRole provider = new PropertyCellProvider(myNode, getEditorContext());
     provider.setRole("name");
     provider.setNoTargetText("<no name>");
+    provider.setReadOnly(true);
     EditorCell editorCell;
     editorCell = provider.createEditorCell(getEditorContext());
     editorCell.setCellId("property_name");

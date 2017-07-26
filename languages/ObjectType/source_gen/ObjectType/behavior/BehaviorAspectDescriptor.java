@@ -12,9 +12,13 @@ import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
+  private final BHDescriptor myISetDefaultToday__BehaviorDescriptor = new ISetDefaultToday__BehaviorDescriptor();
+  private final BHDescriptor myObjectType__BehaviorDescriptor = new ObjectType__BehaviorDescriptor();
   private final BHDescriptor myProperty__BehaviorDescriptor = new Property__BehaviorDescriptor();
   private final BHDescriptor myRelation__BehaviorDescriptor = new Relation__BehaviorDescriptor();
   private final BHDescriptor myAbstractProperty__BehaviorDescriptor = new AbstractProperty__BehaviorDescriptor();
+  private final BHDescriptor myValidFromPoperty__BehaviorDescriptor = new ValidFromPoperty__BehaviorDescriptor();
+  private final BHDescriptor myValidToPoperty__BehaviorDescriptor = new ValidToPoperty__BehaviorDescriptor();
   private final BHDescriptor myMethod__BehaviorDescriptor = new Method__BehaviorDescriptor();
   private final BHDescriptor myObjectEventModel__BehaviorDescriptor = new ObjectEventModel__BehaviorDescriptor();
 
@@ -24,20 +28,28 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   @Nullable
   public BHDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
     SAbstractConcept cncpt = concept;
-    switch (index_846f5o_a0i.index(cncpt)) {
+    switch (index_846f5o_a0m.index(cncpt)) {
       case 0:
         return myAbstractProperty__BehaviorDescriptor;
       case 1:
-        return myMethod__BehaviorDescriptor;
+        return myISetDefaultToday__BehaviorDescriptor;
       case 2:
-        return myObjectEventModel__BehaviorDescriptor;
+        return myMethod__BehaviorDescriptor;
       case 3:
-        return myProperty__BehaviorDescriptor;
+        return myObjectEventModel__BehaviorDescriptor;
       case 4:
+        return myObjectType__BehaviorDescriptor;
+      case 5:
+        return myProperty__BehaviorDescriptor;
+      case 6:
         return myRelation__BehaviorDescriptor;
+      case 7:
+        return myValidFromPoperty__BehaviorDescriptor;
+      case 8:
+        return myValidToPoperty__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex index_846f5o_a0i = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c30915f01aL), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b121L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dae2f3L)).seal();
+  private static final ConceptSwitchIndex index_846f5o_a0m = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59296fcL), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c30915f01aL), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b121L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dae2f3L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d119L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d11cL)).seal();
 }
