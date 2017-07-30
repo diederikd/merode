@@ -13,6 +13,7 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptData = createDescriptorForData();
+  /*package*/ final ConceptDescriptor myConceptEvents = createDescriptorForEvents();
   /*package*/ final ConceptDescriptor myConceptSpecification = createDescriptorForSpecification();
   private final LanguageConceptSwitch myConceptIndex;
 
@@ -22,7 +23,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptData, myConceptSpecification);
+    return Arrays.asList(myConceptData, myConceptEvents, myConceptSpecification);
   }
 
   @Override
@@ -31,6 +32,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myConceptIndex.index(id)) {
       case LanguageConceptSwitch.Data:
         return myConceptData;
+      case LanguageConceptSwitch.Events:
+        return myConceptEvents;
       case LanguageConceptSwitch.Specification:
         return myConceptSpecification;
       default:
@@ -47,6 +50,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.origin("r:f78cea42-5ad4-4a39-960f-415f5b1aa24d(Specification.structure)/3499668250778198200");
     b.aggregate("sets", 0x309151bb6758e9f8L).target(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb67587108L).optional(true).ordered(true).multiple(true).origin("3499668250778200568").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEvents() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Specification", "Events", 0x40b7f9cd2341434aL, 0xa23eae796e75a4d8L, 0x24097a55b88d0492L);
+    b.class_(false, false, true);
+    b.origin("r:f78cea42-5ad4-4a39-960f-415f5b1aa24d(Specification.structure)/2596741168742859922");
+    b.aggregate("events", 0x24097a55b88e4ef1L).target(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x24097a55b88d7404L).optional(true).ordered(true).multiple(true).origin("2596741168742944497").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSpecification() {

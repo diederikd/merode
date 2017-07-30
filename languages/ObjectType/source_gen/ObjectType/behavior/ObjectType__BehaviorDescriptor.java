@@ -7,11 +7,19 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.BehaviorRegistry;
 import jetbrains.mps.smodel.language.ConceptRegistry;
-import java.util.List;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
+import java.util.List;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
+import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
+import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
+import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.mps.openapi.model.SNode;
+import java.util.ArrayList;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -20,12 +28,23 @@ public final class ObjectType__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L, "ObjectType.structure.ObjectType");
   private static final BehaviorRegistry REGISTRY = ConceptRegistry.getInstance().getBehaviorRegistry();
 
+  public static final SMethod<List<SNode>> getPropertiesFromSuperObjectTypes_id1LSSMgyebeb = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("getPropertiesFromSuperObjectTypes").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1LSSMgyebeb").registry(REGISTRY).build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList();
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getPropertiesFromSuperObjectTypes_id1LSSMgyebeb);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
+  /*package*/ static List<SNode> getPropertiesFromSuperObjectTypes_id1LSSMgyebeb(@NotNull SNode __thisNode__) {
+    List<SNode> abstractProperties = new ArrayList<SNode>();
+    for (SNode inheritance : ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.getNodeAncestor(__thisNode__, MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c30915f01aL, "ObjectType.structure.ObjectEventModel"), false, false), MetaAdapterFactory.getContainmentLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c30915f01aL, 0x45a92bc2566cca50L, "inheritances")))) {
+      if (SLinkOperations.getTarget(inheritance, MetaAdapterFactory.getReferenceLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x45a92bc2566cc9ffL, 0x45a92bc2566cca4dL, "subtype")) == __thisNode__) {
+        ListSequence.fromList(abstractProperties).addSequence(ListSequence.fromList(ObjectType__BehaviorDescriptor.getPropertiesFromSuperObjectTypes_id1LSSMgyebeb.invoke(SLinkOperations.getTarget(inheritance, MetaAdapterFactory.getReferenceLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x45a92bc2566cc9ffL, 0x45a92bc2566cca00L, "supertype")))));
+        ListSequence.fromList(abstractProperties).addSequence(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(inheritance, MetaAdapterFactory.getReferenceLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x45a92bc2566cc9ffL, 0x45a92bc2566cca00L, "supertype")), MetaAdapterFactory.getContainmentLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L, 0x53eb98c308d9bb25L, "properties"))));
+      }
+    }
+    return abstractProperties;
+  }
 
   /*package*/ ObjectType__BehaviorDescriptor() {
     super(REGISTRY);
@@ -43,6 +62,8 @@ public final class ObjectType__BehaviorDescriptor extends BaseBHDescriptor {
       throw new BHMethodNotFoundException(this, method);
     }
     switch (methodIndex) {
+      case 0:
+        return (T) ((List<SNode>) getPropertiesFromSuperObjectTypes_id1LSSMgyebeb(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

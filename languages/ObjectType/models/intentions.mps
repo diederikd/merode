@@ -558,5 +558,28 @@
       </node>
     </node>
   </node>
+  <node concept="2S6QgY" id="4mDaW9mEeMj">
+    <property role="TrG5h" value="Delete" />
+    <ref role="2ZfgGC" to="2bjx:4mDaW9mrcBZ" resolve="Inheritance" />
+    <node concept="2S6ZIM" id="4mDaW9mEeMk" role="2ZfVej">
+      <node concept="3clFbS" id="4mDaW9mEeMl" role="2VODD2">
+        <node concept="3cpWs6" id="4mDaW9mEeV9" role="3cqZAp">
+          <node concept="Xl_RD" id="4mDaW9mEf3F" role="3cqZAk">
+            <property role="Xl_RC" value="Delete Inheritance" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2Sbjvc" id="4mDaW9mEeMm" role="2ZfgGD">
+      <node concept="3clFbS" id="4mDaW9mEeMn" role="2VODD2">
+        <node concept="3clFbF" id="4mDaW9mEg7x" role="3cqZAp">
+          <node concept="2OqwBi" id="4mDaW9mEgex" role="3clFbG">
+            <node concept="2Sf5sV" id="4mDaW9mEg7w" role="2Oq$k0" />
+            <node concept="1PgB_6" id="4mDaW9mEgo3" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

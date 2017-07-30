@@ -17,6 +17,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private final ConceptPresentation props_EventType = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Expression = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_ISetDefaultToday = new ConceptPresentationBuilder().create();
+  private final ConceptPresentation props_Inheritance = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_InputProperty = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_InputPropertyReference = new ConceptPresentationBuilder().create();
   private final ConceptPresentation props_Method = new ConceptPresentationBuilder().create();
@@ -51,6 +52,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         return props_Expression;
       case LanguageConceptSwitch.ISetDefaultToday:
         return props_ISetDefaultToday;
+      case LanguageConceptSwitch.Inheritance:
+        return props_Inheritance;
       case LanguageConceptSwitch.InputProperty:
         return props_InputProperty;
       case LanguageConceptSwitch.InputPropertyReference:

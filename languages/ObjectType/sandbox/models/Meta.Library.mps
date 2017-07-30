@@ -19,6 +19,9 @@
       </concept>
     </language>
     <language id="40b7f9cd-2341-434a-a23e-ae796e75a4d8" name="Specification">
+      <concept id="2596741168742859922" name="Specification.structure.Events" flags="ng" index="2sx7V7">
+        <child id="2596741168742944497" name="events" index="2sxNi$" />
+      </concept>
       <concept id="3499668250778198200" name="Specification.structure.Data" flags="ng" index="1nMr43">
         <child id="3499668250778200568" name="sets" index="1nMrx3" />
       </concept>
@@ -28,6 +31,14 @@
       </concept>
     </language>
     <language id="cab25696-e7a8-4bc6-80eb-639299db8d07" name="Objects">
+      <concept id="2596741168742888452" name="Objects.structure.Event" flags="ng" index="2sx0Th">
+        <reference id="2596741168742888453" name="eventType" index="2sx0Tg" />
+        <child id="2596741168742888459" name="inputPropertyValue" index="2sx0Tu" />
+      </concept>
+      <concept id="2596741168742860043" name="Objects.structure.InputPropertyValue" flags="ng" index="2sx7Xu">
+        <reference id="2596741168742860044" name="inputProperty" index="2sx7Xp" />
+        <child id="2596741168742860046" name="value" index="2sx7Xr" />
+      </concept>
       <concept id="3499668250777873209" name="Objects.structure.PropertyValue" flags="ng" index="1nKFE2">
         <reference id="3499668250777873210" name="property" index="1nKFE1" />
         <child id="3499668250777873614" name="value" index="1nKFPP" />
@@ -67,6 +78,7 @@
         <reference id="6047094888112167076" name="object" index="1qUw1B" />
         <reference id="6047094888110111779" name="event" index="1r2qjw" />
         <child id="6047094888110111791" name="properties" index="1r2qjG" />
+        <child id="4680873378918186108" name="assigments" index="3HXv7P" />
       </concept>
       <concept id="6047094888110111785" name="ObjectType.structure.AbstractPropertyReference" flags="ng" index="1r2qjE">
         <reference id="6047094888110111786" name="abstractProperty" index="1r2qjD" />
@@ -89,6 +101,13 @@
         <property id="6047094888110062841" name="timedObject" index="1r2IgU" />
         <child id="4271746357561625467" name="identifiying" index="3ejW7m" />
         <child id="6047094888109554469" name="properties" index="1rcyfA" />
+      </concept>
+      <concept id="4680873378918027602" name="ObjectType.structure.Assignment" flags="ng" index="3G21Nr">
+        <reference id="4680873378918027603" name="assignedTo" index="3G21Nq" />
+        <child id="4680873378918186103" name="theAssigned" index="3HXv7Y" />
+      </concept>
+      <concept id="4680873378918027607" name="ObjectType.structure.InputPropertyReference" flags="ng" index="3G21Nu">
+        <reference id="4680873378918027608" name="inputProperty" index="3G21Nh" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -285,15 +304,6 @@
         <node concept="3eOzau" id="3H8iERPExB7" role="1r2qjG">
           <ref role="3eOzap" node="3H8iERPBC2f" resolve="registration-number" />
         </node>
-        <node concept="3eOzau" id="3H8iERPExBI" role="1r2qjG">
-          <ref role="3eOzap" node="3H8iEROXf1v" resolve="name of member" />
-        </node>
-        <node concept="3eOzau" id="3H8iERPExFp" role="1r2qjG">
-          <ref role="3eOzap" node="3H8iEROXf3r" resolve="birthday" />
-        </node>
-        <node concept="3eOzau" id="3H8iERPExEb" role="1r2qjG">
-          <ref role="3eOzap" node="3H8iERPBC7X" resolve="category" />
-        </node>
       </node>
       <node concept="1r2qjx" id="5fFAcc9lkqv" role="1qS01u">
         <property role="1qUw1U" value="M" />
@@ -310,6 +320,24 @@
         </node>
         <node concept="3eOzau" id="3H8iERPD4f6" role="1r2qjG">
           <ref role="3eOzap" node="3H8iERPBC7X" resolve="category" />
+        </node>
+        <node concept="3G21Nr" id="43PNoAH5Q7e" role="3HXv7P">
+          <ref role="3G21Nq" node="3H8iERPBC4j" resolve="address" />
+          <node concept="3G21Nu" id="43PNoAHb2Rx" role="3HXv7Y">
+            <ref role="3G21Nh" node="3H8iERPD4iM" resolve="input-address" />
+          </node>
+        </node>
+        <node concept="3G21Nr" id="43PNoAH7UW8" role="3HXv7P">
+          <ref role="3G21Nq" node="3H8iEROXf1v" resolve="name of member" />
+          <node concept="3G21Nu" id="43PNoAHa01$" role="3HXv7Y">
+            <ref role="3G21Nh" node="3H8iERPD4dT" resolve="input-name of member" />
+          </node>
+        </node>
+        <node concept="3G21Nr" id="43PNoAHb6zi" role="3HXv7P">
+          <ref role="3G21Nq" node="3H8iERPBC7X" resolve="category" />
+          <node concept="3G21Nu" id="43PNoAHb6$s" role="3HXv7Y">
+            <ref role="3G21Nh" node="3H8iERPD4f6" resolve="input-category" />
+          </node>
         </node>
       </node>
       <node concept="1r2qjx" id="3H8iERPExM5" role="1qS01u">
@@ -543,6 +571,32 @@
         <node concept="1nKFE2" id="3H8iERPBCcf" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iEROXf3r" resolve="birthday" />
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2sx7V7" id="2g9u_mS$bka">
+    <node concept="2sx0Th" id="2g9u_mS$bkG" role="2sxNi$">
+      <ref role="2sx0Tg" node="5fFAcc96LLB" resolve="create title" />
+      <node concept="2sx7Xu" id="2g9u_mS$kcQ" role="2sx0Tu">
+        <ref role="2sx7Xp" node="3H8iERPBBKV" resolve="input-title" />
+        <node concept="1nKFOa" id="2g9u_mS$kcS" role="2sx7Xr">
+          <property role="1nKFO9" value="Title 2" />
+        </node>
+      </node>
+    </node>
+    <node concept="2sx0Th" id="2g9u_mS$Eo9" role="2sxNi$">
+      <ref role="2sx0Tg" node="5fFAcc9f8uN" resolve="enter" />
+      <node concept="2sx7Xu" id="2g9u_mS$Eoe" role="2sx0Tu">
+        <ref role="2sx7Xp" node="3H8iERPExRX" resolve="input-name of member" />
+      </node>
+      <node concept="2sx7Xu" id="2g9u_mS$Eof" role="2sx0Tu">
+        <ref role="2sx7Xp" node="3H8iERPExSw" resolve="input-birthday" />
+      </node>
+      <node concept="2sx7Xu" id="2g9u_mS$Eog" role="2sx0Tu">
+        <ref role="2sx7Xp" node="3H8iERPExWX" resolve="input-address" />
+      </node>
+      <node concept="2sx7Xu" id="2g9u_mS$Eoh" role="2sx0Tu">
+        <ref role="2sx7Xp" node="3H8iERPExZd" resolve="input-category" />
       </node>
     </node>
   </node>

@@ -10,17 +10,21 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
   public static final int DateValue = 0;
-  public static final int ObjectInstance = 1;
-  public static final int ObjectInstanceValue = 2;
-  public static final int PropertyValue = 3;
-  public static final int SetObjectInstances = 4;
-  public static final int StringValue = 5;
-  public static final int Validity = 6;
-  public static final int Value = 7;
+  public static final int Event = 1;
+  public static final int InputPropertyValue = 2;
+  public static final int ObjectInstance = 3;
+  public static final int ObjectInstanceValue = 4;
+  public static final int PropertyValue = 5;
+  public static final int SetObjectInstances = 6;
+  public static final int StringValue = 7;
+  public static final int Validity = 8;
+  public static final int Value = 9;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xcab25696e7a84bc6L, 0x80eb639299db8d07L);
     builder.put(0x309151bb6753ecc8L, DateValue);
+    builder.put(0x24097a55b88d7404L, Event);
+    builder.put(0x24097a55b88d050bL, InputPropertyValue);
     builder.put(0x53eb98c308da284cL, ObjectInstance);
     builder.put(0x309151bb67599d18L, ObjectInstanceValue);
     builder.put(0x309151bb6753eb39L, PropertyValue);

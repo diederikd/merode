@@ -72,5 +72,18 @@
       <ref role="20lvS9" to="nvit:32hkrHBm748" resolve="SetObjectInstances" />
     </node>
   </node>
+  <node concept="1TIwiD" id="2g9u_mSzgii">
+    <property role="EcuMT" value="2596741168742859922" />
+    <property role="TrG5h" value="Events" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="2g9u_mSz$VL" role="1TKVEi">
+      <property role="IQ2ns" value="2596741168742944497" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="events" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" to="nvit:2g9u_mSzng4" resolve="Event" />
+    </node>
+  </node>
 </model>
 

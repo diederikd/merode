@@ -304,6 +304,13 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="5fFAcc8SzKy" resolve="Method" />
     </node>
+    <node concept="1TJgyj" id="4mDaW9mrcDg" role="1TKVEi">
+      <property role="IQ2ns" value="5019591373354748496" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="inheritances" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="4mDaW9mrcBZ" resolve="Inheritance" />
+    </node>
   </node>
   <node concept="1TIwiD" id="32hkrHBaoSY">
     <property role="EcuMT" value="3499668250775096894" />
@@ -353,6 +360,7 @@
       <property role="IQ2ns" value="4680873378918186103" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="theAssigned" />
+      <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="43PNoAGZt5l" resolve="Expression" />
     </node>
   </node>
@@ -373,6 +381,25 @@
       <property role="IQ2ns" value="4680873378918027608" />
       <property role="20kJfa" value="inputProperty" />
       <ref role="20lvS9" node="3H8iERPABwN" resolve="InputProperty" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4mDaW9mrcBZ">
+    <property role="EcuMT" value="5019591373354748415" />
+    <property role="TrG5h" value="Inheritance" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4mDaW9mrcC0" role="1TKVEi">
+      <property role="IQ2ns" value="5019591373354748416" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="supertype" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fFAcc8Qr4w" resolve="ObjectType" />
+    </node>
+    <node concept="1TJgyj" id="4mDaW9mrcDd" role="1TKVEi">
+      <property role="IQ2ns" value="5019591373354748493" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="subtype" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fFAcc8Qr4w" resolve="ObjectType" />
     </node>
   </node>
 </model>

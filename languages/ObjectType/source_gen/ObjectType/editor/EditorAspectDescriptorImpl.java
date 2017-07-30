@@ -20,7 +20,7 @@ import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase implements EditorHintsProvider {
-  private Collection<ConceptEditorHint> myHints = Arrays.<ConceptEditorHint>asList(new ConceptEditorHintImpl("table", "", true, "ObjectType.editor.ObjectTypeHints.table"));
+  private Collection<ConceptEditorHint> myHints = Arrays.<ConceptEditorHint>asList(new ConceptEditorHintImpl("table", "", true, "ObjectType.editor.ObjectTypeHints.table"), new ConceptEditorHintImpl("onlyType", "", true, "ObjectType.editor.ObjectTypeHints.onlyType"), new ConceptEditorHintImpl("supertype", "", true, "ObjectType.editor.ObjectTypeHints.supertype"), new ConceptEditorHintImpl("subtype", "", true, "ObjectType.editor.ObjectTypeHints.subtype"));
   @NotNull
   public Collection<ConceptEditor> getDeclaredEditors(SAbstractConcept concept) {
     SAbstractConcept cncpt = ((SAbstractConcept) concept);
@@ -28,30 +28,34 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase imple
       case 0:
         return Collections.<ConceptEditor>singletonList(new AbstractPropertyReference_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new DateType_Editor());
+        return Collections.<ConceptEditor>singletonList(new Assignment_Editor());
       case 2:
-        return Arrays.asList(new ConceptEditor[]{new EventType_Editor(), new EventType_table_Editor()});
+        return Collections.<ConceptEditor>singletonList(new DateType_Editor());
       case 3:
-        return Collections.<ConceptEditor>singletonList(new InputProperty_Editor());
+        return Arrays.asList(new ConceptEditor[]{new EventType_Editor(), new EventType_table_Editor()});
       case 4:
-        return Collections.<ConceptEditor>singletonList(new InputPropertyReference_Editor());
+        return Arrays.asList(new ConceptEditor[]{new Inheritance_Editor(), new Inheritance_subtype_Editor(), new Inheritance_supertype_Editor()});
       case 5:
-        return Arrays.asList(new ConceptEditor[]{new Method_Editor(), new Method_table_Editor()});
+        return Collections.<ConceptEditor>singletonList(new InputProperty_Editor());
       case 6:
-        return Collections.<ConceptEditor>singletonList(new OET_Editor());
+        return Collections.<ConceptEditor>singletonList(new InputPropertyReference_Editor());
       case 7:
-        return Collections.<ConceptEditor>singletonList(new ObjectEventModel_Editor());
+        return Arrays.asList(new ConceptEditor[]{new Method_Editor(), new Method_table_Editor()});
       case 8:
-        return Arrays.asList(new ConceptEditor[]{new ObjectType_Editor(), new ObjectType_table_Editor()});
+        return Collections.<ConceptEditor>singletonList(new OET_Editor());
       case 9:
-        return Arrays.asList(new ConceptEditor[]{new Property_Editor(), new Property_table_Editor()});
+        return Collections.<ConceptEditor>singletonList(new ObjectEventModel_Editor());
       case 10:
-        return Arrays.asList(new ConceptEditor[]{new Relation_Editor(), new Relation_table_Editor()});
+        return Arrays.asList(new ConceptEditor[]{new ObjectType_Editor(), new ObjectType_table_Editor()});
       case 11:
-        return Collections.<ConceptEditor>singletonList(new StringType_Editor());
+        return Arrays.asList(new ConceptEditor[]{new Property_Editor(), new Property_onlyType_Editor(), new Property_table_Editor()});
       case 12:
-        return Collections.<ConceptEditor>singletonList(new ValidFromPoperty_Editor());
+        return Arrays.asList(new ConceptEditor[]{new Relation_Editor(), new Relation_table_Editor()});
       case 13:
+        return Collections.<ConceptEditor>singletonList(new StringType_Editor());
+      case 14:
+        return Collections.<ConceptEditor>singletonList(new ValidFromPoperty_Editor());
+      case 15:
         return Collections.<ConceptEditor>singletonList(new ValidToPoperty_Editor());
       default:
     }
@@ -97,7 +101,7 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase imple
     return Collections.<SubstituteMenu>emptyList();
   }
 
-  private static final ConceptSwitchIndex index_xbvbvu_a0b = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c29L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d118L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e17cfbL), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59a7833L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd157L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e69c16L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c30915f01aL), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b121L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dae2f3L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d117L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d119L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d11cL)).seal();
+  private static final ConceptSwitchIndex index_xbvbvu_a0b = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c29L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd152L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d118L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e17cfbL), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x45a92bc2566cc9ffL), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59a7833L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd157L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e69c16L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c30915f01aL), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b121L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dae2f3L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d117L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d119L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d11cL)).seal();
   private static final ConceptSwitchIndex index_xbvbvu_a0d = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dd6c5cL)).seal();
   private static final ConceptSwitchIndex index_xbvbvu_a0g = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L)).seal();
   private static String[] stringSwitchCases_xbvbvu_a0a0a0a1a6 = new String[]{"ObjectType.editor.DeleteMethod"};

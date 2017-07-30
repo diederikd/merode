@@ -7,6 +7,7 @@
       <modulePath path="$PROJECT_DIR$/languages/ObjectType/ObjectType.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/ObjectType/sandbox/Meta.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/Specification/Specification.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/Tests/Tests.msd" folder="" />
     </projectModules>
   </component>
 </project>

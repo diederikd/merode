@@ -25,22 +25,26 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase imple
       case 0:
         return Collections.<ConceptEditor>singletonList(new DateValue_Editor());
       case 1:
-        return Arrays.asList(new ConceptEditor[]{new ObjectInstance_Editor(), new ObjectInstance_table_Editor()});
+        return Collections.<ConceptEditor>singletonList(new Event_Editor());
       case 2:
-        return Collections.<ConceptEditor>singletonList(new ObjectInstanceValue_Editor());
+        return Collections.<ConceptEditor>singletonList(new InputPropertyValue_Editor());
       case 3:
-        return Collections.<ConceptEditor>singletonList(new Property_table_Editor());
+        return Arrays.asList(new ConceptEditor[]{new ObjectInstance_Editor(), new ObjectInstance_table_Editor()});
       case 4:
-        return Arrays.asList(new ConceptEditor[]{new PropertyValue_Editor(), new PropertyValue_table_Editor()});
+        return Collections.<ConceptEditor>singletonList(new ObjectInstanceValue_Editor());
       case 5:
-        return Collections.<ConceptEditor>singletonList(new Relation_table_Editor());
+        return Collections.<ConceptEditor>singletonList(new Property_table_Editor());
       case 6:
-        return Collections.<ConceptEditor>singletonList(new SetObjectInstances_Editor());
+        return Arrays.asList(new ConceptEditor[]{new PropertyValue_Editor(), new PropertyValue_table_Editor()});
       case 7:
-        return Collections.<ConceptEditor>singletonList(new StringValue_Editor());
+        return Collections.<ConceptEditor>singletonList(new Relation_table_Editor());
       case 8:
-        return Collections.<ConceptEditor>singletonList(new ValidFromPoperty_table_Editor());
+        return Collections.<ConceptEditor>singletonList(new SetObjectInstances_Editor());
       case 9:
+        return Collections.<ConceptEditor>singletonList(new StringValue_Editor());
+      case 10:
+        return Collections.<ConceptEditor>singletonList(new ValidFromPoperty_table_Editor());
+      case 11:
         return Collections.<ConceptEditor>singletonList(new ValidToPoperty_table_Editor());
       default:
     }
@@ -52,5 +56,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase imple
   }
 
 
-  private static final ConceptSwitchIndex index_xbvbvu_a0b = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecc8L), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x53eb98c308da284cL), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb67599d18L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b121L), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dae2f3L), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb67587108L), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecb1L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d119L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d11cL)).seal();
+  private static final ConceptSwitchIndex index_xbvbvu_a0b = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecc8L), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x24097a55b88d7404L), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x24097a55b88d050bL), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x53eb98c308da284cL), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb67599d18L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b121L), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308dae2f3L), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb67587108L), MetaIdFactory.conceptId(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecb1L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d119L), MetaIdFactory.conceptId(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e0d11cL)).seal();
 }

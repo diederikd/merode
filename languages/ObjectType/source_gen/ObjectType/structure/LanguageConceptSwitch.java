@@ -17,18 +17,19 @@ public final class LanguageConceptSwitch {
   public static final int EventType = 5;
   public static final int Expression = 6;
   public static final int ISetDefaultToday = 7;
-  public static final int InputProperty = 8;
-  public static final int InputPropertyReference = 9;
-  public static final int Method = 10;
-  public static final int OET = 11;
-  public static final int ObjectEventModel = 12;
-  public static final int ObjectType = 13;
-  public static final int Property = 14;
-  public static final int PropertyType = 15;
-  public static final int Relation = 16;
-  public static final int StringType = 17;
-  public static final int ValidFromPoperty = 18;
-  public static final int ValidToPoperty = 19;
+  public static final int Inheritance = 8;
+  public static final int InputProperty = 9;
+  public static final int InputPropertyReference = 10;
+  public static final int Method = 11;
+  public static final int OET = 12;
+  public static final int ObjectEventModel = 13;
+  public static final int ObjectType = 14;
+  public static final int Property = 15;
+  public static final int PropertyType = 16;
+  public static final int Relation = 17;
+  public static final int StringType = 18;
+  public static final int ValidFromPoperty = 19;
+  public static final int ValidToPoperty = 20;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x2f2b62d8f25248ccL, 0x8e79f44966765664L);
@@ -40,6 +41,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x53eb98c308e17cfbL, EventType);
     builder.put(0x40f5cd89acfdd155L, Expression);
     builder.put(0x3b484aadf59296fcL, ISetDefaultToday);
+    builder.put(0x45a92bc2566cc9ffL, Inheritance);
     builder.put(0x3b484aadf59a7833L, InputProperty);
     builder.put(0x40f5cd89acfdd157L, InputPropertyReference);
     builder.put(0x53eb98c308e23c22L, Method);

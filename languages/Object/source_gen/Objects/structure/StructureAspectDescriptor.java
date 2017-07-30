@@ -13,6 +13,8 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDateValue = createDescriptorForDateValue();
+  /*package*/ final ConceptDescriptor myConceptEvent = createDescriptorForEvent();
+  /*package*/ final ConceptDescriptor myConceptInputPropertyValue = createDescriptorForInputPropertyValue();
   /*package*/ final ConceptDescriptor myConceptObjectInstance = createDescriptorForObjectInstance();
   /*package*/ final ConceptDescriptor myConceptObjectInstanceValue = createDescriptorForObjectInstanceValue();
   /*package*/ final ConceptDescriptor myConceptPropertyValue = createDescriptorForPropertyValue();
@@ -28,7 +30,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptDateValue, myConceptObjectInstance, myConceptObjectInstanceValue, myConceptPropertyValue, myConceptSetObjectInstances, myConceptStringValue, myConceptValidity, myConceptValue);
+    return Arrays.asList(myConceptDateValue, myConceptEvent, myConceptInputPropertyValue, myConceptObjectInstance, myConceptObjectInstanceValue, myConceptPropertyValue, myConceptSetObjectInstances, myConceptStringValue, myConceptValidity, myConceptValue);
   }
 
   @Override
@@ -37,6 +39,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myConceptIndex.index(id)) {
       case LanguageConceptSwitch.DateValue:
         return myConceptDateValue;
+      case LanguageConceptSwitch.Event:
+        return myConceptEvent;
+      case LanguageConceptSwitch.InputPropertyValue:
+        return myConceptInputPropertyValue;
       case LanguageConceptSwitch.ObjectInstance:
         return myConceptObjectInstance;
       case LanguageConceptSwitch.ObjectInstanceValue:
@@ -66,6 +72,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("Objects.structure.Value", 0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb3cL);
     b.origin("r:e4e9cd54-c712-47ad-a551-140b5440c2a7(Objects.structure)/3499668250777873608");
     b.aggregate("value", 0x309151bb6753ecc9L).target(0x2bc0050f69d04772L, 0x99033735cb700947L, 0x53eb98c308d9b15eL).optional(true).ordered(true).multiple(false).origin("3499668250777873609").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEvent() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Objects", "Event", 0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x24097a55b88d7404L);
+    b.class_(false, false, false);
+    b.origin("r:e4e9cd54-c712-47ad-a551-140b5440c2a7(Objects.structure)/2596741168742888452");
+    b.associate("eventType", 0x24097a55b88d7405L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e17cfbL).optional(false).origin("2596741168742888453").done();
+    b.aggregate("inputPropertyValue", 0x24097a55b88d740bL).target(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x24097a55b88d050bL).optional(true).ordered(true).multiple(true).origin("2596741168742888459").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForInputPropertyValue() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Objects", "InputPropertyValue", 0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x24097a55b88d050bL);
+    b.class_(false, false, false);
+    b.origin("r:e4e9cd54-c712-47ad-a551-140b5440c2a7(Objects.structure)/2596741168742860043");
+    b.associate("inputProperty", 0x24097a55b88d050cL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59a7833L).optional(false).origin("2596741168742860044").done();
+    b.aggregate("value", 0x24097a55b88d050eL).target(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb3cL).optional(true).ordered(true).multiple(false).origin("2596741168742860046").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForObjectInstance() {

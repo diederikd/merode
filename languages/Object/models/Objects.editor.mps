@@ -926,5 +926,90 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="2g9u_mSzngm">
+    <ref role="1XX52x" to="nvit:2g9u_mSzng4" resolve="Event" />
+    <node concept="3EZMnI" id="2g9u_mSzngo" role="2wV5jI">
+      <node concept="l2Vlx" id="2g9u_mSzngp" role="2iSdaV" />
+      <node concept="3F0ifn" id="2g9u_mSzngq" role="3EZMnx">
+        <property role="3F0ifm" value="event" />
+      </node>
+      <node concept="3F0ifn" id="2g9u_mSzngr" role="3EZMnx">
+        <property role="3F0ifm" value="event type" />
+      </node>
+      <node concept="1iCGBv" id="2g9u_mSzngs" role="3EZMnx">
+        <ref role="1NtTu8" to="nvit:2g9u_mSzng5" resolve="eventType" />
+        <node concept="1sVBvm" id="2g9u_mSzngv" role="1sWHZn">
+          <node concept="3F0A7n" id="2g9u_mSzngx" role="2wV5jI">
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2g9u_mSzngy" role="3EZMnx">
+        <node concept="3mYdg7" id="2g9u_mSzngz" role="3F10Kt">
+          <property role="1413C4" value="body-brace" />
+        </node>
+        <node concept="ljvvj" id="2g9u_mSzng$" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="2g9u_mSzng_" role="3EZMnx">
+        <node concept="l2Vlx" id="2g9u_mSzngA" role="2iSdaV" />
+        <node concept="lj46D" id="2g9u_mSzngB" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="3F0ifn" id="2g9u_mSzngC" role="3EZMnx">
+          <property role="3F0ifm" value="input property value" />
+        </node>
+        <node concept="3F0ifn" id="2g9u_mSzngD" role="3EZMnx">
+          <property role="3F0ifm" value=":" />
+          <node concept="11L4FC" id="2g9u_mSzngE" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="2g9u_mSzngF" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F2HdR" id="2g9u_mSzngG" role="3EZMnx">
+          <ref role="1NtTu8" to="nvit:2g9u_mSzngb" resolve="inputPropertyValue" />
+          <node concept="l2Vlx" id="2g9u_mSzngH" role="2czzBx" />
+          <node concept="pj6Ft" id="2g9u_mSzngI" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="lj46D" id="2g9u_mSzngJ" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="2g9u_mSzngK" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2g9u_mSzngL" role="3EZMnx">
+        <node concept="3mYdg7" id="2g9u_mSzngM" role="3F10Kt">
+          <property role="1413C4" value="body-brace" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2g9u_mS$bkS">
+    <property role="3GE5qa" value="Values" />
+    <ref role="1XX52x" to="nvit:2g9u_mSzgkb" resolve="InputPropertyValue" />
+    <node concept="3EZMnI" id="2g9u_mS$bkU" role="2wV5jI">
+      <node concept="l2Vlx" id="2g9u_mS$bkV" role="2iSdaV" />
+      <node concept="1iCGBv" id="2g9u_mS$bkY" role="3EZMnx">
+        <ref role="1NtTu8" to="nvit:2g9u_mSzgkc" resolve="inputProperty" />
+        <node concept="1sVBvm" id="2g9u_mS$bl1" role="1sWHZn">
+          <node concept="3F0A7n" id="2g9u_mS$bl3" role="2wV5jI">
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2g9u_mS$bme" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F1sOY" id="2g9u_mS$blb" role="3EZMnx">
+        <ref role="1NtTu8" to="nvit:2g9u_mSzgke" resolve="value" />
+      </node>
+    </node>
+  </node>
 </model>
 
