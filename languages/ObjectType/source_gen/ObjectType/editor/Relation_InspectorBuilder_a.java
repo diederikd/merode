@@ -55,6 +55,9 @@ import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
     if (nodeCondition_4myft4_a6a()) {
       editorCell.addEditorCell(createConstant_4myft4_g0());
     }
+    editorCell.addEditorCell(createConstant_4myft4_h0());
+    editorCell.addEditorCell(createConstant_4myft4_i0());
+    editorCell.addEditorCell(createProperty_4myft4_j0());
     return editorCell;
   }
   private boolean nodeCondition_4myft4_a6a() {
@@ -231,6 +234,36 @@ import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "(multiple)");
     editorCell.setCellId("Constant_4myft4_g0");
     editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_4myft4_h0() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "mandatory");
+    editorCell.setCellId("Constant_4myft4_h0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_4myft4_i0() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ":");
+    editorCell.setCellId("Constant_4myft4_i0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createProperty_4myft4_j0() {
+    CellProviderWithRole provider = new PropertyCellProvider(myNode, getEditorContext());
+    provider.setRole("Mandatory");
+    provider.setNoTargetText("<no Mandatory>");
+    EditorCell editorCell;
+    editorCell = provider.createEditorCell(getEditorContext());
+    editorCell.setCellId("property_Mandatory");
+    editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
+    SNode attributeConcept = provider.getRoleAttribute();
+    if (attributeConcept != null) {
+      EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
+      return manager.createNodeRoleAttributeCell(attributeConcept, provider.getRoleAttributeKind(), editorCell);
+    } else
     return editorCell;
   }
 }

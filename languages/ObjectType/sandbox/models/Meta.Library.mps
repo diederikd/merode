@@ -62,6 +62,9 @@
       </concept>
     </language>
     <language id="2f2b62d8-f252-48cc-8e79-f44966765664" name="ObjectType">
+      <concept id="2051639374601065885" name="ObjectType.structure.IMandatory" flags="ng" index="YdvqT">
+        <property id="2051639374601065886" name="Mandatory" index="YdvqU" />
+      </concept>
       <concept id="4271746357571254323" name="ObjectType.structure.InputProperty" flags="ng" index="3eOzau">
         <reference id="4271746357571254324" name="property" index="3eOzap" />
       </concept>
@@ -177,6 +180,7 @@
         <node concept="1rcnCK" id="32hkrHBkXrs" role="1rcyfA">
           <property role="TrG5h" value="title" />
           <property role="1nKpxF" value="true" />
+          <property role="YdvqU" value="true" />
           <ref role="1rcnCR" node="5fFAcc96LL$" resolve="Title" />
           <ref role="1rcnJN" node="5fFAcc99$59" resolve="Copy" />
         </node>
@@ -229,6 +233,7 @@
         </node>
         <node concept="1rcyBy" id="3H8iEROXf1v" role="1rcyfA">
           <property role="TrG5h" value="name of member" />
+          <property role="YdvqU" value="true" />
           <node concept="1r2OBk" id="3H8iEROXf2a" role="1nRLLq" />
         </node>
         <node concept="1rcyBy" id="3H8iERPBC4j" role="1rcyfA">
@@ -500,6 +505,22 @@
           </node>
         </node>
       </node>
+      <node concept="1rcr2f" id="1LSSMgyl0H3" role="1nMi2H">
+        <property role="TrG5h" value="" />
+        <ref role="1rcr2e" node="5fFAcc99$59" resolve="Copy" />
+        <node concept="1nKFE2" id="1LSSMgyl0H4" role="1nLUGl">
+          <ref role="1nKFE1" node="32hkrHBkcx3" resolve="name of copy" />
+          <node concept="1nKFOa" id="1LSSMgyl0Hq" role="1nKFPP">
+            <property role="1nKFO9" value="Fourth copy" />
+          </node>
+        </node>
+        <node concept="1nKFE2" id="1LSSMgyl0H5" role="1nLUGl">
+          <ref role="1nKFE1" node="32hkrHBkXrs" resolve="title" />
+          <node concept="1nMcMz" id="1LSSMgyl0Ho" role="1nKFPP">
+            <ref role="1nMcMu" node="3H8iERPwNwa" resolve="Title2 " />
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="1nMi2N" id="32hkrHBmi_e" role="1nMrx3">
       <ref role="1nMZua" node="5fFAcc9eCAO" resolve="Loan" />
@@ -514,61 +535,58 @@
         </node>
         <node concept="1nKFE2" id="3H8iERPvdRn" role="1nLUGl">
           <ref role="1nKFE1" node="32hkrHBkcA2" resolve="lent to member" />
-          <node concept="1nMcMz" id="3H8iERPBCc7" role="1nKFPP">
-            <ref role="1nMcMu" node="3H8iERPBCbR" resolve="Member 1 " />
+          <node concept="1nMcMz" id="1LSSMgykh59" role="1nKFPP">
+            <ref role="1nMcMu" node="1LSSMgyjhlZ" resolve="Member 3 " />
           </node>
         </node>
       </node>
     </node>
     <node concept="1nMi2N" id="3H8iEROXeYU" role="1nMrx3">
       <ref role="1nMZua" node="5fFAcc9f8ty" resolve="Member" />
-      <node concept="1rcr2f" id="3H8iERPBCbR" role="1nMi2H">
+      <node concept="1rcr2f" id="1LSSMgyjhlZ" role="1nMi2H">
         <property role="TrG5h" value="" />
         <ref role="1rcr2e" node="5fFAcc9f8ty" resolve="Member" />
-        <node concept="1nKFE2" id="3H8iERPBCbS" role="1nLUGl">
+        <node concept="1nKFE2" id="1LSSMgyjhm0" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iERPBC2f" resolve="registration-number" />
-          <node concept="1nKFOa" id="3H8iERPBCc3" role="1nKFPP">
-            <property role="1nKFO9" value="Member 1" />
+          <node concept="1nKFOa" id="1LSSMgyjhmr" role="1nKFPP">
+            <property role="1nKFO9" value="Member 3" />
           </node>
         </node>
-        <node concept="1nKFE2" id="3H8iERPBCbT" role="1nLUGl">
+        <node concept="1nKFE2" id="1LSSMgyjhm1" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iEROXf1v" resolve="name of member" />
+          <node concept="1nKFOa" id="1LSSMgykh4J" role="1nKFPP">
+            <property role="1nKFO9" value="Kees" />
+          </node>
+        </node>
+        <node concept="1nKFE2" id="1LSSMgyjhm2" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iERPBC4j" resolve="address" />
         </node>
-        <node concept="1nKFE2" id="3H8iERPBCbU" role="1nLUGl">
-          <ref role="1nKFE1" node="3H8iEROXf1v" resolve="name of member" />
-          <node concept="1nKFOa" id="3H8iERPBCc5" role="1nKFPP">
-            <property role="1nKFO9" value="Diederik" />
-          </node>
-        </node>
-        <node concept="1nKFE2" id="3H8iERPBCbV" role="1nLUGl">
+        <node concept="1nKFE2" id="1LSSMgyjhm3" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iERPBC7X" resolve="category" />
         </node>
-        <node concept="1nKFE2" id="3H8iERPBCbW" role="1nLUGl">
+        <node concept="1nKFE2" id="1LSSMgyjhm4" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iEROXf3r" resolve="birthday" />
         </node>
       </node>
-      <node concept="1rcr2f" id="3H8iERPBCca" role="1nMi2H">
+      <node concept="1rcr2f" id="1LSSMgykh5c" role="1nMi2H">
         <property role="TrG5h" value="" />
         <ref role="1rcr2e" node="5fFAcc9f8ty" resolve="Member" />
-        <node concept="1nKFE2" id="3H8iERPBCcb" role="1nLUGl">
+        <node concept="1nKFE2" id="1LSSMgykh5d" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iERPBC2f" resolve="registration-number" />
-          <node concept="1nKFOa" id="3H8iERPBCcu" role="1nKFPP">
-            <property role="1nKFO9" value="Member 2" />
-          </node>
         </node>
-        <node concept="1nKFE2" id="3H8iERPBCcc" role="1nLUGl">
-          <ref role="1nKFE1" node="3H8iERPBC4j" resolve="address" />
-        </node>
-        <node concept="1nKFE2" id="3H8iERPBCcd" role="1nLUGl">
+        <node concept="1nKFE2" id="1LSSMgykh5e" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iEROXf1v" resolve="name of member" />
-          <node concept="1nKFOa" id="3H8iERPBCcw" role="1nKFPP">
+          <node concept="1nKFOa" id="1LSSMgykraD" role="1nKFPP">
             <property role="1nKFO9" value="Jan" />
           </node>
         </node>
-        <node concept="1nKFE2" id="3H8iERPBCce" role="1nLUGl">
+        <node concept="1nKFE2" id="1LSSMgykh5f" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iERPBC4j" resolve="address" />
+        </node>
+        <node concept="1nKFE2" id="1LSSMgykh5g" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iERPBC7X" resolve="category" />
         </node>
-        <node concept="1nKFE2" id="3H8iERPBCcf" role="1nLUGl">
+        <node concept="1nKFE2" id="1LSSMgykh5h" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iEROXf3r" resolve="birthday" />
         </node>
       </node>

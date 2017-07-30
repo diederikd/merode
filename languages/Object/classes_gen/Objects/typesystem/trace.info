@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
   <root>
     <file name="TypesystemDescriptor.java">
-      <unit at="7,0,11,0" name="Objects.typesystem.TypesystemDescriptor" />
+      <unit at="8,0,16,0" name="Objects.typesystem.TypesystemDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:4cc7fa5b-4341-4605-b8cc-d399ef56d731(Objects.typesystem)/2051639374601219007">
+    <file name="typeof_PropertyValue_InferenceRule.java">
+      <node id="2051639374601223762" at="23,7,24,60" concept="4" />
+      <node id="2051639374601223762" at="24,60,25,562" concept="4" />
+      <node id="2051639374601219007" at="29,50,30,139" concept="5" />
+      <node id="2051639374601219007" at="32,68,33,102" concept="5" />
+      <node id="2051639374601219007" at="35,30,36,17" concept="5" />
+      <node id="2051639374601219007" at="19,0,21,0" concept="1" trace="typeof_PropertyValue_InferenceRule#()V" />
+      <node id="2051639374601219007" at="29,0,32,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="2051639374601219007" at="32,0,35,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="2051639374601219007" at="35,0,38,0" concept="3" trace="overrides#()Z" />
+      <node id="2051639374601223762" at="22,531,26,7" concept="0" />
+      <node id="2051639374601219026" at="21,126,27,5" concept="2" />
+      <node id="2051639374601219007" at="21,0,29,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="2051639374601219007" at="19,47,19,47" />
+      <scope id="2051639374601219007" at="29,50,30,139" />
+      <scope id="2051639374601219007" at="32,68,33,102" />
+      <scope id="2051639374601219007" at="35,30,36,17" />
+      <scope id="2051639374601219007" at="19,0,21,0" />
+      <scope id="2051639374601223762" at="23,7,25,562">
+        <var name="_reporter_2309309498" id="2051639374601223762" />
+        <var name="errorTarget" id="2051639374601223762" />
+      </scope>
+      <scope id="2051639374601219007" at="29,0,32,0" />
+      <scope id="2051639374601219007" at="32,0,35,0">
+        <var name="argument" id="2051639374601219007" />
+      </scope>
+      <scope id="2051639374601219007" at="35,0,38,0" />
+      <scope id="2051639374601219028" at="22,531,26,7" />
+      <scope id="2051639374601219008" at="21,126,27,5" />
+      <scope id="2051639374601219007" at="21,0,29,0">
+        <var name="propertyValue" id="2051639374601219007" />
+        <var name="status" id="2051639374601219007" />
+        <var name="typeCheckingContext" id="2051639374601219007" />
+      </scope>
+      <unit id="2051639374601219007" at="18,0,39,0" name="Objects.typesystem.typeof_PropertyValue_InferenceRule" />
     </file>
   </root>
 </debug-info>

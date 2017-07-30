@@ -19,6 +19,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDateType = createDescriptorForDateType();
   /*package*/ final ConceptDescriptor myConceptEventType = createDescriptorForEventType();
   /*package*/ final ConceptDescriptor myConceptExpression = createDescriptorForExpression();
+  /*package*/ final ConceptDescriptor myConceptIMandatory = createDescriptorForIMandatory();
   /*package*/ final ConceptDescriptor myConceptISetDefaultToday = createDescriptorForISetDefaultToday();
   /*package*/ final ConceptDescriptor myConceptInheritance = createDescriptorForInheritance();
   /*package*/ final ConceptDescriptor myConceptInputProperty = createDescriptorForInputProperty();
@@ -41,7 +42,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractMethod, myConceptAbstractProperty, myConceptAbstractPropertyReference, myConceptAssignment, myConceptDateType, myConceptEventType, myConceptExpression, myConceptISetDefaultToday, myConceptInheritance, myConceptInputProperty, myConceptInputPropertyReference, myConceptMethod, myConceptOET, myConceptObjectEventModel, myConceptObjectType, myConceptProperty, myConceptPropertyType, myConceptRelation, myConceptStringType, myConceptValidFromPoperty, myConceptValidToPoperty);
+    return Arrays.asList(myConceptAbstractMethod, myConceptAbstractProperty, myConceptAbstractPropertyReference, myConceptAssignment, myConceptDateType, myConceptEventType, myConceptExpression, myConceptIMandatory, myConceptISetDefaultToday, myConceptInheritance, myConceptInputProperty, myConceptInputPropertyReference, myConceptMethod, myConceptOET, myConceptObjectEventModel, myConceptObjectType, myConceptProperty, myConceptPropertyType, myConceptRelation, myConceptStringType, myConceptValidFromPoperty, myConceptValidToPoperty);
   }
 
   @Override
@@ -62,6 +63,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptEventType;
       case LanguageConceptSwitch.Expression:
         return myConceptExpression;
+      case LanguageConceptSwitch.IMandatory:
+        return myConceptIMandatory;
       case LanguageConceptSwitch.ISetDefaultToday:
         return myConceptISetDefaultToday;
       case LanguageConceptSwitch.Inheritance:
@@ -110,6 +113,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, true, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.parent(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59296fcL);
+    b.parent(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x1c78e324224d159dL);
     b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/6047094888109796444");
     return b.create();
   }
@@ -146,6 +150,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ObjectType", "Expression", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd155L);
     b.class_(false, true, false);
     b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/4680873378918027605");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForIMandatory() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ObjectType", "IMandatory", 0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x1c78e324224d159dL);
+    b.interface_();
+    b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/2051639374601065885");
+    b.prop("Mandatory", 0x1c78e324224d159eL, "2051639374601065886");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForISetDefaultToday() {
