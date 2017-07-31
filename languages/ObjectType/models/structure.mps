@@ -208,14 +208,14 @@
     <node concept="1TJgyj" id="5fFAcc8SzKz" role="1TKVEi">
       <property role="IQ2ns" value="6047094888110111779" />
       <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="event" />
+      <property role="20kJfa" value="eventType" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="5fFAcc8SnNV" resolve="EventType" />
     </node>
     <node concept="1TJgyj" id="5fFAcc90py$" role="1TKVEi">
       <property role="IQ2ns" value="6047094888112167076" />
       <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="object" />
+      <property role="20kJfa" value="objectType" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="5fFAcc8Qr4w" resolve="ObjectType" />
     </node>

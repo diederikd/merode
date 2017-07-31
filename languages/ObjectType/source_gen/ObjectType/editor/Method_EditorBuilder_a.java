@@ -92,20 +92,20 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
           public EditorCell compute() {
             return new Method_EditorBuilder_a.Inline_Builder_gfox8l_a2a(getEditorContext(), myNode, effectiveNode).createCell();
           }
-        }, effectiveNode, "object");
+        }, effectiveNode, "objectType");
         CellUtil.setupIDeprecatableStyles(effectiveNode, cell);
         setSemanticNodeToCells(cell, myNode);
         installDeleteActions_atLeastOne(cell);
         return cell;
       }
     };
-    provider.setRole("object");
-    provider.setNoTargetText("<no object>");
+    provider.setRole("objectType");
+    provider.setNoTargetText("<no objectType>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(getEditorContext());
     if (editorCell.getRole() == null) {
       editorCell.setReferenceCell(true);
-      editorCell.setRole("object");
+      editorCell.setRole("objectType");
     }
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
@@ -177,20 +177,20 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
           public EditorCell compute() {
             return new Method_EditorBuilder_a.Inline_Builder_gfox8l_a5a(getEditorContext(), myNode, effectiveNode).createCell();
           }
-        }, effectiveNode, "event");
+        }, effectiveNode, "eventType");
         CellUtil.setupIDeprecatableStyles(effectiveNode, cell);
         setSemanticNodeToCells(cell, myNode);
         installDeleteActions_atLeastOne(cell);
         return cell;
       }
     };
-    provider.setRole("event");
-    provider.setNoTargetText("<no event>");
+    provider.setRole("eventType");
+    provider.setNoTargetText("<no eventType>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(getEditorContext());
     if (editorCell.getRole() == null) {
       editorCell.setReferenceCell(true);
-      editorCell.setRole("event");
+      editorCell.setRole("eventType");
     }
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
@@ -357,7 +357,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
     }
   }
   private EditorCell createConstant_gfox8l_m0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "assikgnments");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "assignments");
     editorCell.setCellId("Constant_gfox8l_m0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);

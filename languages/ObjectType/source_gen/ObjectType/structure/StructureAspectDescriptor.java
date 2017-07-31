@@ -197,8 +197,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)/6047094888110111778");
     b.prop("type", 0x53eb98c3090198b9L, "6047094888112167097");
-    b.associate("event", 0x53eb98c308e23c23L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e17cfbL).optional(false).origin("6047094888110111779").done();
-    b.associate("object", 0x53eb98c3090198a4L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L).optional(false).origin("6047094888112167076").done();
+    b.associate("eventType", 0x53eb98c308e23c23L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e17cfbL).optional(false).origin("6047094888110111779").done();
+    b.associate("objectType", 0x53eb98c3090198a4L).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L).optional(false).origin("6047094888112167076").done();
     b.aggregate("properties", 0x53eb98c308e23c2fL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x3b484aadf59a7833L).optional(true).ordered(true).multiple(true).origin("6047094888110111791").done();
     b.aggregate("assigments", 0x40f5cd89ad003c7cL).target(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x40f5cd89acfdd152L).optional(true).ordered(true).multiple(true).origin("4680873378918186108").done();
     return b.create();

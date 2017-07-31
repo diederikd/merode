@@ -48,6 +48,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForData() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Specification", "Data", 0x40b7f9cd2341434aL, 0xa23eae796e75a4d8L, 0x309151bb6758e0b8L);
     b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:f78cea42-5ad4-4a39-960f-415f5b1aa24d(Specification.structure)/3499668250778198200");
     b.aggregate("sets", 0x309151bb6758e9f8L).target(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb67587108L).optional(true).ordered(true).multiple(true).origin("3499668250778200568").done();
     return b.create();
@@ -55,7 +56,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForEvents() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Specification", "Events", 0x40b7f9cd2341434aL, 0xa23eae796e75a4d8L, 0x24097a55b88d0492L);
     b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:f78cea42-5ad4-4a39-960f-415f5b1aa24d(Specification.structure)/2596741168742859922");
+    b.associate("belongfTo", 0x1c78e3242258e2b0L).target(0x40b7f9cd2341434aL, 0xa23eae796e75a4d8L, 0x309151bb6758e0b8L).optional(false).origin("2051639374601839280").done();
     b.aggregate("events", 0x24097a55b88e4ef1L).target(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x24097a55b88d7404L).optional(true).ordered(true).multiple(true).origin("2596741168742944497").done();
     return b.create();
   }

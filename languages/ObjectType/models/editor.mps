@@ -2384,7 +2384,7 @@
         </node>
       </node>
       <node concept="3F0ifn" id="5fFAcc8SUpt" role="3EZMnx">
-        <property role="3F0ifm" value="assikgnments" />
+        <property role="3F0ifm" value="assignments" />
         <node concept="lj46D" id="5fFAcc8SUpK" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>

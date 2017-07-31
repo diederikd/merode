@@ -54,6 +54,8 @@
     <dependency reexport="false">2f2b62d8-f252-48cc-8e79-f44966765664(ObjectType)</dependency>
     <dependency reexport="false">6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)</dependency>
     <dependency reexport="false">8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)</dependency>
+    <dependency reexport="false">40b7f9cd-2341-434a-a23e-ae796e75a4d8(Specification)</dependency>
+    <dependency reexport="false">cab25696-e7a8-4bc6-80eb-639299db8d07(Objects)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:2f2b62d8-f252-48cc-8e79-f44966765664:ObjectType" version="1" />
@@ -105,6 +107,8 @@
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
     <module reference="2f2b62d8-f252-48cc-8e79-f44966765664(ObjectType)" version="1" />
+    <module reference="cab25696-e7a8-4bc6-80eb-639299db8d07(Objects)" version="0" />
+    <module reference="40b7f9cd-2341-434a-a23e-ae796e75a4d8(Specification)" version="0" />
     <module reference="848ef45d-e560-4e35-853c-f35a64cc135c(de.itemis.mps.editor.celllayout.runtime)" version="0" />
     <module reference="cce85e64-7b37-4ad5-b0e6-9d18324cdfb3(de.itemis.mps.selection.runtime)" version="0" />
     <module reference="7e450f4e-1ac3-41ef-a851-4598161bdb94(de.slisson.mps.tables)" version="0" />

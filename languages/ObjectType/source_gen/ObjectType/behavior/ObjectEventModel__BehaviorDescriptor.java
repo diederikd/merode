@@ -48,8 +48,8 @@ public final class ObjectEventModel__BehaviorDescriptor extends BaseBHDescriptor
   }
   /*package*/ static SNode AddMethod_id5fFAcc9gCGF(@NotNull SNode __thisNode__, SNode objectType, SNode eventType) {
     SNode method = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L, "ObjectType.structure.Method"));
-    SLinkOperations.setTarget(method, MetaAdapterFactory.getReferenceLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L, 0x53eb98c3090198a4L, "object"), objectType);
-    SLinkOperations.setTarget(method, MetaAdapterFactory.getReferenceLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L, 0x53eb98c308e23c23L, "event"), eventType);
+    SLinkOperations.setTarget(method, MetaAdapterFactory.getReferenceLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L, 0x53eb98c3090198a4L, "objectType"), objectType);
+    SLinkOperations.setTarget(method, MetaAdapterFactory.getReferenceLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c22L, 0x53eb98c308e23c23L, "eventType"), eventType);
     ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c30915f01aL, 0x53eb98c3090b989dL, "methods"))).addElement(method);
     return method;
   }

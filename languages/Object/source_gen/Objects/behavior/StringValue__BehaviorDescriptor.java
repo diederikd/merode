@@ -33,6 +33,9 @@ public final class StringValue__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static String getStringValue_id3H8iERP6xbE(@NotNull SNode __thisNode__) {
+    if ((__thisNode__ == null)) {
+      return "";
+    }
     return SPropertyOperations.getString(__thisNode__, MetaAdapterFactory.getProperty(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753ecb1L, 0x309151bb6753ecb2L, "value"));
   }
 

@@ -14,6 +14,8 @@
     <import index="2bjx" ref="r:8b913b67-58d8-411d-aac5-4697eec5ec10(ObjectType.structure)" />
     <import index="ncw5" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.util.annotation(MPS.Core/)" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" />
+    <import index="xjs9" ref="r:f78cea42-5ad4-4a39-960f-415f5b1aa24d(Specification.structure)" />
+    <import index="nvit" ref="r:e4e9cd54-c712-47ad-a551-140b5440c2a7(Objects.structure)" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -261,7 +263,7 @@
             <node concept="2OqwBi" id="3H8iERPF3pi" role="2Oq$k0">
               <node concept="13iPFW" id="3H8iERPF3aA" role="2Oq$k0" />
               <node concept="3TrEf2" id="3H8iERPF3DU" role="2OqNvi">
-                <ref role="3Tt5mk" to="2bjx:5fFAcc90py$" resolve="object" />
+                <ref role="3Tt5mk" to="2bjx:5fFAcc90py$" resolve="objectType" />
               </node>
             </node>
             <node concept="3Tsc0h" id="3H8iERPF4oh" role="2OqNvi">
@@ -437,7 +439,7 @@
                 <ref role="3cqZAo" node="5fFAcc9gCGK" resolve="method" />
               </node>
               <node concept="3TrEf2" id="5fFAcc9gGz7" role="2OqNvi">
-                <ref role="3Tt5mk" to="2bjx:5fFAcc90py$" resolve="object" />
+                <ref role="3Tt5mk" to="2bjx:5fFAcc90py$" resolve="objectType" />
               </node>
             </node>
             <node concept="2oxUTD" id="5fFAcc9gHm1" role="2OqNvi">
@@ -454,7 +456,7 @@
                 <ref role="3cqZAo" node="5fFAcc9gCGK" resolve="method" />
               </node>
               <node concept="3TrEf2" id="5fFAcc9gI6c" role="2OqNvi">
-                <ref role="3Tt5mk" to="2bjx:5fFAcc8SzKz" resolve="event" />
+                <ref role="3Tt5mk" to="2bjx:5fFAcc8SzKz" resolve="eventType" />
               </node>
             </node>
             <node concept="2oxUTD" id="5fFAcc9gIB0" role="2OqNvi">

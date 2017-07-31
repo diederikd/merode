@@ -20,6 +20,7 @@
     </language>
     <language id="40b7f9cd-2341-434a-a23e-ae796e75a4d8" name="Specification">
       <concept id="2596741168742859922" name="Specification.structure.Events" flags="ng" index="2sx7V7">
+        <reference id="2051639374601839280" name="belongfTo" index="Y806k" />
         <child id="2596741168742944497" name="events" index="2sxNi$" />
       </concept>
       <concept id="3499668250778198200" name="Specification.structure.Data" flags="ng" index="1nMr43">
@@ -78,8 +79,8 @@
       </concept>
       <concept id="6047094888110111778" name="ObjectType.structure.Method" flags="ng" index="1r2qjx">
         <property id="6047094888112167097" name="type" index="1qUw1U" />
-        <reference id="6047094888112167076" name="object" index="1qUw1B" />
-        <reference id="6047094888110111779" name="event" index="1r2qjw" />
+        <reference id="6047094888112167076" name="objectType" index="1qUw1B" />
+        <reference id="6047094888110111779" name="eventType" index="1r2qjw" />
         <child id="6047094888110111791" name="properties" index="1r2qjG" />
         <child id="4680873378918186108" name="assigments" index="3HXv7P" />
       </concept>
@@ -120,7 +121,7 @@
     </language>
   </registry>
   <node concept="1rcryU" id="5fFAcc96LLw">
-    <property role="TrG5h" value="Library" />
+    <property role="TrG5h" value="Library specifications" />
     <node concept="1qZAzp" id="5fFAcc96LLx" role="1qZAzw">
       <node concept="1r2IgS" id="5fFAcc9c$CH" role="1r2IkC">
         <property role="TrG5h" value="borrow" />
@@ -289,6 +290,39 @@
         <property role="1qUw1U" value="C" />
         <ref role="1qUw1B" node="5fFAcc9f8ty" resolve="Member" />
         <ref role="1r2qjw" node="5fFAcc9f8uN" resolve="enter" />
+        <node concept="3G21Nr" id="1LSSMgyrRjG" role="3HXv7P">
+          <ref role="3G21Nq" node="3H8iERPBC2f" resolve="registration-number" />
+          <node concept="3G21Nu" id="1LSSMgyrRkU" role="3HXv7Y">
+            <ref role="3G21Nh" node="1LSSMgylFzE" resolve="input-registration-number" />
+          </node>
+        </node>
+        <node concept="3G21Nr" id="1LSSMgyl8eY" role="3HXv7P">
+          <ref role="3G21Nq" node="3H8iEROXf1v" resolve="name of member" />
+          <node concept="3G21Nu" id="1LSSMgyl8g4" role="3HXv7Y">
+            <ref role="3G21Nh" node="3H8iERPExRX" resolve="input-name of member" />
+          </node>
+        </node>
+        <node concept="3G21Nr" id="1LSSMgyl8gC" role="3HXv7P">
+          <ref role="3G21Nq" node="3H8iEROXf3r" resolve="birthday" />
+          <node concept="3G21Nu" id="1LSSMgyl8hK" role="3HXv7Y">
+            <ref role="3G21Nh" node="3H8iERPExSw" resolve="input-birthday" />
+          </node>
+        </node>
+        <node concept="3G21Nr" id="1LSSMgyl8ik" role="3HXv7P">
+          <ref role="3G21Nq" node="3H8iERPBC4j" resolve="address" />
+          <node concept="3G21Nu" id="1LSSMgyl8ju" role="3HXv7Y">
+            <ref role="3G21Nh" node="3H8iERPExWX" resolve="input-address" />
+          </node>
+        </node>
+        <node concept="3G21Nr" id="1LSSMgyl8k2" role="3HXv7P">
+          <ref role="3G21Nq" node="3H8iERPBC7X" resolve="category" />
+          <node concept="3G21Nu" id="1LSSMgyl8le" role="3HXv7Y">
+            <ref role="3G21Nh" node="3H8iERPExZd" resolve="input-category" />
+          </node>
+        </node>
+        <node concept="3eOzau" id="1LSSMgylFzE" role="1r2qjG">
+          <ref role="3eOzap" node="3H8iERPBC2f" resolve="registration-number" />
+        </node>
         <node concept="3eOzau" id="3H8iERPExRX" role="1r2qjG">
           <ref role="3eOzap" node="3H8iEROXf1v" resolve="name of member" />
         </node>
@@ -309,6 +343,12 @@
         <node concept="3eOzau" id="3H8iERPExB7" role="1r2qjG">
           <ref role="3eOzap" node="3H8iERPBC2f" resolve="registration-number" />
         </node>
+        <node concept="3G21Nr" id="1LSSMgyl8dP" role="3HXv7P">
+          <ref role="3G21Nq" node="3H8iERPBC2f" resolve="registration-number" />
+          <node concept="3G21Nu" id="1LSSMgyl8eq" role="3HXv7Y">
+            <ref role="3G21Nh" node="3H8iERPExB7" resolve="input-registration-number" />
+          </node>
+        </node>
       </node>
       <node concept="1r2qjx" id="5fFAcc9lkqv" role="1qS01u">
         <property role="1qUw1U" value="M" />
@@ -325,6 +365,12 @@
         </node>
         <node concept="3eOzau" id="3H8iERPD4f6" role="1r2qjG">
           <ref role="3eOzap" node="3H8iERPBC7X" resolve="category" />
+        </node>
+        <node concept="3G21Nr" id="1LSSMgyl8c5" role="3HXv7P">
+          <ref role="3G21Nq" node="3H8iERPBC2f" resolve="registration-number" />
+          <node concept="3G21Nu" id="1LSSMgyl8dh" role="3HXv7Y">
+            <ref role="3G21Nh" node="3H8iERPC6Vu" resolve="input-registration-number" />
+          </node>
         </node>
         <node concept="3G21Nr" id="43PNoAH5Q7e" role="3HXv7P">
           <ref role="3G21Nq" node="3H8iERPBC4j" resolve="address" />
@@ -369,6 +415,7 @@
     <node concept="1r3gjl" id="5fFAcc96LLM" role="1r0HIl" />
   </node>
   <node concept="1nMr43" id="32hkrHBmfxQ">
+    <property role="TrG5h" value="Library data" />
     <node concept="1nMi2N" id="3H8iERP9eR0" role="1nMrx3">
       <ref role="1nMZua" node="5fFAcc96LL$" resolve="Title" />
       <node concept="1rcr2f" id="3H8iERPu7SC" role="1nMi2H">
@@ -573,6 +620,9 @@
         <ref role="1rcr2e" node="5fFAcc9f8ty" resolve="Member" />
         <node concept="1nKFE2" id="1LSSMgykh5d" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iERPBC2f" resolve="registration-number" />
+          <node concept="1nKFOa" id="1LSSMgynfv7" role="1nKFPP">
+            <property role="1nKFO9" value="Member 4" />
+          </node>
         </node>
         <node concept="1nKFE2" id="1LSSMgykh5e" role="1nLUGl">
           <ref role="1nKFE1" node="3H8iEROXf1v" resolve="name of member" />
@@ -590,31 +640,128 @@
           <ref role="1nKFE1" node="3H8iEROXf3r" resolve="birthday" />
         </node>
       </node>
-    </node>
-  </node>
-  <node concept="2sx7V7" id="2g9u_mS$bka">
-    <node concept="2sx0Th" id="2g9u_mS$bkG" role="2sxNi$">
-      <ref role="2sx0Tg" node="5fFAcc96LLB" resolve="create title" />
-      <node concept="2sx7Xu" id="2g9u_mS$kcQ" role="2sx0Tu">
-        <ref role="2sx7Xp" node="3H8iERPBBKV" resolve="input-title" />
-        <node concept="1nKFOa" id="2g9u_mS$kcS" role="2sx7Xr">
-          <property role="1nKFO9" value="Title 2" />
+      <node concept="1rcr2f" id="1LSSMgynhr0" role="1nMi2H">
+        <property role="TrG5h" value="" />
+        <ref role="1rcr2e" node="5fFAcc9f8ty" resolve="Member" />
+        <node concept="1nKFE2" id="1LSSMgynhr1" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iERPBC2f" resolve="registration-number" />
+          <node concept="1nKFOa" id="1LSSMgynX7Y" role="1nKFPP">
+            <property role="1nKFO9" value="Member 5" />
+          </node>
+        </node>
+        <node concept="1nKFE2" id="1LSSMgynhr2" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iEROXf1v" resolve="name of member" />
+          <node concept="1nKFOa" id="1LSSMgynhrs" role="1nKFPP">
+            <property role="1nKFO9" value="Erik" />
+          </node>
+        </node>
+        <node concept="1nKFE2" id="1LSSMgynhr3" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iERPBC4j" resolve="address" />
+        </node>
+        <node concept="1nKFE2" id="1LSSMgynhr4" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iERPBC7X" resolve="category" />
+        </node>
+        <node concept="1nKFE2" id="1LSSMgynhr5" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iEROXf3r" resolve="birthday" />
+        </node>
+      </node>
+      <node concept="1rcr2f" id="1LSSMgyppNd" role="1nMi2H">
+        <property role="TrG5h" value="" />
+        <ref role="1rcr2e" node="5fFAcc9f8ty" resolve="Member" />
+        <node concept="1nKFE2" id="1LSSMgyppNe" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iERPBC2f" resolve="registration-number" />
+          <node concept="1nKFOa" id="1LSSMgypBcY" role="1nKFPP">
+            <property role="1nKFO9" value="Member 6" />
+          </node>
+        </node>
+        <node concept="1nKFE2" id="1LSSMgyppNf" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iEROXf1v" resolve="name of member" />
+          <node concept="1nKFOa" id="1LSSMgypBcU" role="1nKFPP">
+            <property role="1nKFO9" value="Jan-Kees" />
+          </node>
+        </node>
+        <node concept="1nKFE2" id="1LSSMgyppNg" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iERPBC4j" resolve="address" />
+        </node>
+        <node concept="1nKFE2" id="1LSSMgyppNh" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iERPBC7X" resolve="category" />
+        </node>
+        <node concept="1nKFE2" id="1LSSMgyppNi" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iEROXf3r" resolve="birthday" />
+        </node>
+      </node>
+      <node concept="1rcr2f" id="1LSSMgyppNL" role="1nMi2H">
+        <property role="TrG5h" value="" />
+        <ref role="1rcr2e" node="5fFAcc9f8ty" resolve="Member" />
+        <node concept="1nKFE2" id="1LSSMgyppNM" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iERPBC2f" resolve="registration-number" />
+          <node concept="1nKFOa" id="1LSSMgypBd0" role="1nKFPP">
+            <property role="1nKFO9" value="Member 7" />
+          </node>
+        </node>
+        <node concept="1nKFE2" id="1LSSMgyppNN" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iEROXf1v" resolve="name of member" />
+          <node concept="1nKFOa" id="1LSSMgypBcW" role="1nKFPP">
+            <property role="1nKFO9" value="Anita" />
+          </node>
+        </node>
+        <node concept="1nKFE2" id="1LSSMgyppNO" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iERPBC4j" resolve="address" />
+        </node>
+        <node concept="1nKFE2" id="1LSSMgyppNP" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iERPBC7X" resolve="category" />
+        </node>
+        <node concept="1nKFE2" id="1LSSMgyppNQ" role="1nLUGl">
+          <ref role="1nKFE1" node="3H8iEROXf3r" resolve="birthday" />
         </node>
       </node>
     </node>
-    <node concept="2sx0Th" id="2g9u_mS$Eo9" role="2sxNi$">
+  </node>
+  <node concept="2sx7V7" id="2g9u_mS$bka">
+    <property role="TrG5h" value="Library events" />
+    <ref role="Y806k" node="32hkrHBmfxQ" resolve="Library data" />
+    <node concept="2sx0Th" id="1LSSMgylFA0" role="2sxNi$">
       <ref role="2sx0Tg" node="5fFAcc9f8uN" resolve="enter" />
-      <node concept="2sx7Xu" id="2g9u_mS$Eoe" role="2sx0Tu">
+      <node concept="2sx7Xu" id="1LSSMgylFA1" role="2sx0Tu">
+        <ref role="2sx7Xp" node="1LSSMgylFzE" resolve="input-registration-number" />
+        <node concept="1nKFOa" id="1LSSMgylFAm" role="2sx7Xr">
+          <property role="1nKFO9" value="reg 12" />
+        </node>
+      </node>
+      <node concept="2sx7Xu" id="1LSSMgylFA2" role="2sx0Tu">
         <ref role="2sx7Xp" node="3H8iERPExRX" resolve="input-name of member" />
+        <node concept="1nKFOa" id="1LSSMgyrOkh" role="2sx7Xr">
+          <property role="1nKFO9" value="Erik" />
+        </node>
       </node>
-      <node concept="2sx7Xu" id="2g9u_mS$Eof" role="2sx0Tu">
+      <node concept="2sx7Xu" id="1LSSMgylFA3" role="2sx0Tu">
         <ref role="2sx7Xp" node="3H8iERPExSw" resolve="input-birthday" />
+        <node concept="1nKFPN" id="1LSSMgyrOkj" role="2sx7Xr">
+          <node concept="1rcyAt" id="1LSSMgyrOkl" role="1nKFPM">
+            <property role="1rcyNX" value="2009" />
+          </node>
+        </node>
       </node>
-      <node concept="2sx7Xu" id="2g9u_mS$Eog" role="2sx0Tu">
+      <node concept="2sx7Xu" id="1LSSMgylFA4" role="2sx0Tu">
         <ref role="2sx7Xp" node="3H8iERPExWX" resolve="input-address" />
+        <node concept="1nKFOa" id="1LSSMgyrOkn" role="2sx7Xr">
+          <property role="1nKFO9" value="Straat 10" />
+        </node>
       </node>
-      <node concept="2sx7Xu" id="2g9u_mS$Eoh" role="2sx0Tu">
+      <node concept="2sx7Xu" id="1LSSMgylFA5" role="2sx0Tu">
         <ref role="2sx7Xp" node="3H8iERPExZd" resolve="input-category" />
+        <node concept="1nKFOa" id="1LSSMgyrOkp" role="2sx7Xr">
+          <property role="1nKFO9" value="cat 1" />
+        </node>
+      </node>
+    </node>
+    <node concept="2sx0Th" id="1LSSMgylFAc" role="2sxNi$">
+      <ref role="2sx0Tg" node="5fFAcc9f8va" resolve="leave" />
+      <node concept="2sx7Xu" id="1LSSMgylFAk" role="2sx0Tu">
+        <ref role="2sx7Xp" node="3H8iERPExB7" resolve="input-registration-number" />
+        <node concept="1nKFOa" id="1LSSMgylFAy" role="2sx7Xr">
+          <property role="1nKFO9" value="reg 12" />
+        </node>
       </node>
     </node>
   </node>

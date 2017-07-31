@@ -71,6 +71,9 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" to="nvit:32hkrHBm748" resolve="SetObjectInstances" />
     </node>
+    <node concept="PrWs8" id="1LSSMgymecy" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2g9u_mSzgii">
     <property role="EcuMT" value="2596741168742859922" />
@@ -83,6 +86,16 @@
       <property role="20kJfa" value="events" />
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" to="nvit:2g9u_mSzng4" resolve="Event" />
+    </node>
+    <node concept="1TJgyj" id="1LSSMgymeaK" role="1TKVEi">
+      <property role="IQ2ns" value="2051639374601839280" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="belongfTo" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="32hkrHBme2S" resolve="Data" />
+    </node>
+    <node concept="PrWs8" id="1LSSMgymtdN" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

@@ -42,7 +42,7 @@
       <node id="2596741168742888565" at="52,212,62,19" concept="4" />
       <node id="2596741168742888562" at="51,55,63,17" concept="4" />
       <node id="2596741168742888562" at="49,208,64,15" concept="0" />
-      <node id="2596741168742888541" at="46,358,66,13" concept="3" />
+      <node id="2596741168742888541" at="46,362,66,13" concept="3" />
       <node id="2596741168742917108" at="45,604,67,11" concept="4" />
       <node id="2596741168742897577" at="44,119,68,9" concept="3" />
       <node id="2596741168742888526" at="43,0,70,0" concept="5" trace="onReferenceSet#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
@@ -72,10 +72,10 @@
       <scope id="2596741168742888548" at="47,232,65,256">
         <var name="inputPropertyValue" id="2596741168742888550" />
       </scope>
-      <scope id="2596741168742888541" at="46,358,66,13">
+      <scope id="2596741168742888541" at="46,362,66,13">
         <var name="property" id="2596741168742888542" />
       </scope>
-      <scope id="2596741168742917110" at="46,358,66,13" />
+      <scope id="2596741168742917110" at="46,362,66,13" />
       <scope id="2596741168742897583" at="45,604,67,11" />
       <scope id="2596741168742888530" at="44,119,68,9" />
       <scope id="2596741168742897577" at="44,119,68,9">

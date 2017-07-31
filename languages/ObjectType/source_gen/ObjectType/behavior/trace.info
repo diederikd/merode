@@ -532,7 +532,7 @@
       <node id="4271746357572409739" at="41,116,42,250" concept="1" />
       <node id="4680873378920407044" at="42,250,43,109" concept="1" />
       <node id="4271746357572411324" at="43,109,44,60" concept="5" />
-      <node id="4271746357572421698" at="45,388,46,69" concept="1" />
+      <node id="4271746357572421698" at="45,392,46,69" concept="1" />
       <node id="4271746357572412147" at="47,5,48,58" concept="6" />
       <node id="6047094888115619872" at="51,44,52,20" concept="9" />
       <node id="6047094888115619872" at="56,114,57,21" concept="1" />
@@ -559,7 +559,7 @@
       <node id="6047094888115619872" at="74,0,85,0" concept="4" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <node id="6047094888115619872" at="60,0,73,0" concept="4" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <scope id="6047094888115619872" at="38,63,38,63" />
-      <scope id="4271746357572414339" at="45,388,46,69" />
+      <scope id="4271746357572414339" at="45,392,46,69" />
       <scope id="6047094888115619872" at="51,44,52,20" />
       <scope id="6047094888115619872" at="56,114,57,21" />
       <scope id="6047094888115619872" at="63,26,64,56" />
@@ -625,9 +625,9 @@
       <node id="6047094888115620255" at="45,183,46,228" concept="1" />
       <node id="6047094888115646930" at="46,228,47,21" concept="6" />
       <node id="6047094888116423471" at="49,116,50,177" concept="5" />
-      <node id="6047094888116436635" at="50,177,51,181" concept="1" />
-      <node id="6047094888116443623" at="51,181,52,179" concept="1" />
-      <node id="6047094888116423477" at="52,179,53,222" concept="1" />
+      <node id="6047094888116436635" at="50,177,51,185" concept="1" />
+      <node id="6047094888116443623" at="51,185,52,183" concept="1" />
+      <node id="6047094888116423477" at="52,183,53,222" concept="1" />
       <node id="6047094888116423484" at="53,222,54,18" concept="6" />
       <node id="6047094888115620179" at="57,54,58,20" concept="9" />
       <node id="6047094888115620179" at="62,114,63,21" concept="1" />

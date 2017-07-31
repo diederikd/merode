@@ -50,6 +50,7 @@
     <dependency reexport="false">2bc0050f-69d0-4772-9903-3735cb700947(DateTime)</dependency>
     <dependency reexport="false">da21218f-a674-474d-8b4e-d59e33007003(de.slisson.mps.tables.runtime)</dependency>
     <dependency reexport="false">2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)</dependency>
+    <dependency reexport="false">40b7f9cd-2341-434a-a23e-ae796e75a4d8(Specification)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:7e450f4e-1ac3-41ef-a851-4598161bdb94:de.slisson.mps.tables" version="0" />
@@ -96,6 +97,7 @@
     <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
     <module reference="2f2b62d8-f252-48cc-8e79-f44966765664(ObjectType)" version="1" />
     <module reference="cab25696-e7a8-4bc6-80eb-639299db8d07(Objects)" version="0" />
+    <module reference="40b7f9cd-2341-434a-a23e-ae796e75a4d8(Specification)" version="0" />
     <module reference="848ef45d-e560-4e35-853c-f35a64cc135c(de.itemis.mps.editor.celllayout.runtime)" version="0" />
     <module reference="cce85e64-7b37-4ad5-b0e6-9d18324cdfb3(de.itemis.mps.selection.runtime)" version="0" />
     <module reference="da21218f-a674-474d-8b4e-d59e33007003(de.slisson.mps.tables.runtime)" version="0" />

@@ -8,7 +8,7 @@
       <unit at="10,0,32,0" name="Specification.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="14,0,72,0" name="Specification.structure.StructureAspectDescriptor" />
+      <unit at="14,0,75,0" name="Specification.structure.StructureAspectDescriptor" />
     </file>
   </root>
 </debug-info>

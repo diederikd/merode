@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -29,8 +30,9 @@ public final class ObjectInstance__BehaviorDescriptor extends BaseBHDescriptor {
 
   public static final SMethod<String> getUniqueName_id3H8iERP5hpk = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getUniqueName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3H8iERP5hpk").registry(REGISTRY).build();
   public static final SMethod<String> getPropertyStringValue_id3H8iERP5sST = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getPropertyStringValue").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3H8iERP5sST").registry(REGISTRY).build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<Void> assignValueToProperty_id1LSSMgypSNC = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("assignValueToProperty").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1LSSMgypSNC").registry(REGISTRY).build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getUniqueName_id3H8iERP5hpk, getPropertyStringValue_id3H8iERP5sST);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getUniqueName_id3H8iERP5hpk, getPropertyStringValue_id3H8iERP5sST, assignValueToProperty_id1LSSMgypSNC);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
     SPropertyOperations.set(__thisNode__, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "");
@@ -40,7 +42,6 @@ public final class ObjectInstance__BehaviorDescriptor extends BaseBHDescriptor {
     String result = "";
     int x = 0;
     for (SNode property : ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(__thisNode__, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x53eb98c308da284cL, 0x53eb98c308da284dL, "objectType")), MetaAdapterFactory.getContainmentLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L, 0x3b484aadf5078b7bL, "identifiying")))) {
-      System.out.println("getUniqueName property " + SLinkOperations.getChildren(SLinkOperations.getTarget(__thisNode__, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x53eb98c308da284cL, 0x53eb98c308da284dL, "objectType")), MetaAdapterFactory.getContainmentLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308d9b120L, 0x3b484aadf5078b7bL, "identifiying")) + property + ObjectInstance__BehaviorDescriptor.getPropertyStringValue_id3H8iERP5sST.invoke(__thisNode__, SLinkOperations.getTarget(property, MetaAdapterFactory.getReferenceLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c29L, 0x53eb98c308e23c2aL, "abstractProperty"))));
       result = result + ObjectInstance__BehaviorDescriptor.getPropertyStringValue_id3H8iERP5sST.invoke(__thisNode__, SLinkOperations.getTarget(property, MetaAdapterFactory.getReferenceLink(0x2f2b62d8f25248ccL, 0x8e79f44966765664L, 0x53eb98c308e23c29L, 0x53eb98c308e23c2aL, "abstractProperty"))) + " ";
       if (x > 0) {
       }
@@ -52,10 +53,26 @@ public final class ObjectInstance__BehaviorDescriptor extends BaseBHDescriptor {
   /*package*/ static String getPropertyStringValue_id3H8iERP5sST(@NotNull SNode __thisNode__, SNode abstractProperty) {
     for (SNode propertyValue : ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x53eb98c308da284cL, 0x309151bb6756faaeL, "propertyValues")))) {
       if (SLinkOperations.getTarget(propertyValue, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753eb3aL, "property")) == abstractProperty) {
+        if ((SLinkOperations.getTarget(propertyValue, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753ecceL, "value")) == null)) {
+          return "No identifiying value";
+        }
+        if (Value__BehaviorDescriptor.getStringValue_id3H8iERP6xbE.invoke(SLinkOperations.getTarget(propertyValue, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753ecceL, "value"))) == "") {
+          return "No identifiying value";
+        }
+        if (Value__BehaviorDescriptor.getStringValue_id3H8iERP6xbE.invoke(SLinkOperations.getTarget(propertyValue, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753ecceL, "value"))) == "null") {
+          return "No identifiying value";
+        }
         return Value__BehaviorDescriptor.getStringValue_id3H8iERP6xbE.invoke(SLinkOperations.getTarget(propertyValue, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753ecceL, "value")));
       }
     }
     return "";
+  }
+  /*package*/ static void assignValueToProperty_id1LSSMgypSNC(@NotNull SNode __thisNode__, final SNode abstractProperty, SNode value) {
+    SLinkOperations.setTarget(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x53eb98c308da284cL, 0x309151bb6756faaeL, "propertyValues"))).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753eb3aL, "property")) == abstractProperty;
+      }
+    }).first(), MetaAdapterFactory.getContainmentLink(0xcab25696e7a84bc6L, 0x80eb639299db8d07L, 0x309151bb6753eb39L, 0x309151bb6753ecceL, "value"), value);
   }
 
   /*package*/ ObjectInstance__BehaviorDescriptor() {
@@ -78,6 +95,9 @@ public final class ObjectInstance__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((String) getUniqueName_id3H8iERP5hpk(node));
       case 1:
         return (T) ((String) getPropertyStringValue_id3H8iERP5sST(node, (SNode) parameters[0]));
+      case 2:
+        assignValueToProperty_id1LSSMgypSNC(node, (SNode) parameters[0], (SNode) parameters[1]);
+        return null;
       default:
         throw new BHMethodNotFoundException(this, method);
     }
